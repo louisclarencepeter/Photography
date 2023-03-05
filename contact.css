@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
+    font-family: 'Tilt Warp', cursive;
+}
+
+html {
+    font-size: 62.5%;
+    display: table;
+    margin: 0 auto;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #004643;
+    display: table-cell;
+    vertical-align: middle;
+    width: 50vw;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #004643;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: #004643;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    font-size: 1.5rem;
+    color: #fff3ec;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Indie Flower', cursive;
+}
+
+button a {
+    color: #001e1d;
+}
+
+button:hover {
+    background-color: #fffffe;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff3ec;
+    font-family: 'Indie Flower', cursive;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+}
+
+.i {
+    width: 3rem;
+    height: 3rem;
+}
+
+.i:hover {
+    color: #e78fb3;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 85vh;
+    padding: 10rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fffffe;
+    padding: 0 2rem;
+    margin: 10rem;
+    box-shadow: 0.125rem 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(00.625rem);
+}
+
+.socials i{
+    color: #fff3ec;
+    font-size: 5rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        width: 100vw;
+    }
+    
+    form{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact {
+        padding: 5rem;
+        height: 76vh;
+    }
+}
+    
