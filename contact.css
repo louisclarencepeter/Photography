@@ -122,7 +122,28 @@ form {
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
-    padding: 0 2rem;
+    padding: 5rem;
+}
+
+.send {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    background-color: #fffffe;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    color: #001e1d;
+    font-family: 'Indie Flower', cursive;
+}
+
+.send:hover {
+    background-color: #f9bc60;
+    color: #fffffe;
 }
 
 @media screen and (max-width: 480px) {
