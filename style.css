@@ -130,8 +130,7 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    margin-top: 3rem;
+    margin: 1rem auto;
 }
 
 button a {
@@ -306,7 +305,7 @@ h2 {
 }
 
 .aboutlouis p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 100;
     color: white;
     text-align: center;
