@@ -177,6 +177,10 @@ ul {
     grid-template-rows: repeat(10, 1fr);
 }
 
+.home, .about {
+    height: 75vh;
+}
+
 .socials {
     grid-column: 2 / 4;
     grid-row: 2 / 3;
@@ -271,7 +275,7 @@ ul {
 }
 
 h2 {
-    font-size: 7rem;
+    font-size: 4rem;
     font-weight: 700;
     color: #fff3ec;
     text-align: center;
