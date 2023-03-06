@@ -4,7 +4,7 @@
     font-family: 'Tilt Warp', cursive;
 }
 
-.root{
+.root {
     font-size: calp(1.6rem + 0.5vw, 1.6rem, 2.4rem);
 }
 
@@ -15,7 +15,6 @@ html {
 }
 
 body {
-    font-size: 16px;
     line-height: 1.5;
     background-color: #004643;
     display: table-cell;
@@ -26,11 +25,19 @@ body {
 
 header {
     width: 100%;
-    height: 100px;
+    height: 6.25rem;
     background-color: #004643;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header {
+    font-size: 2rem;
+}
+
+footer div p, a{
+    font-size: 2rem;
 }
 
 .logo img {
@@ -41,7 +48,7 @@ header {
 
 footer {
     width: 100%;
-    height: 100px;
+    height: 6.25rem;
     background-color: #004643;
     display: flex;
     justify-content: space-between;
@@ -180,7 +187,8 @@ ul {
     grid-template-rows: repeat(10, 1fr);
 }
 
-.home, .about {
+.home,
+.about {
     height: 75vh;
 }
 
@@ -651,21 +659,16 @@ h2 {
 
 @media screen and (max-width: 480px) {
 
-    body {
-        width: 100vh;
+    .home,
+    .about,
+    .contact {
+        grid-column: 1 / 13;
+        grid-row: 1 / 19;
     }
 
-    .home {
-        height: 75vh;
-    }
-
-    .about{
-        height: 100vh;
-    }
 
     .container {
         width: 100vw;
-        height: 100vh;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(18, 1fr);
@@ -706,9 +709,6 @@ h2 {
         margin-top: 1rem;
     }
 
-    .about {
-        height: 76vh;
-    }
 
     .about h2 {
         font-size: 2.5rem;
@@ -719,31 +719,28 @@ h2 {
         font-size: 3rem;
     }
 
-    .me{
-        height:5vh;
+    .me {
         background-position: center;
     }
 
 
     .aboutlouis p {
         font-size: 0.1rem;
+        height: max-content;
     }
 
 }
 
 @media screen and (max-width: 768px) {
 
-    .home {
-        height: 75vh;
-    }
-
-    .about{
-        height: 75vh;
+    .home, .about{
+        grid-column: 1 / 13;
+        grid-row: 1 / 19;
+        height: max-content;
     }
 
     .container {
         width: 100vw;
-        height: 100vh;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(18, 1fr);
@@ -761,8 +758,11 @@ h2 {
     }
 
     header {
-        height: 10vh;
-        width: 100vw;
+        font-size: 2rem;
+    }
+
+    footer div p, a{
+        font-size: 2rem;
     }
 
     button {
@@ -784,10 +784,6 @@ h2 {
         margin-top: 1rem;
     }
 
-    .about {
-        height: 76vh;
-    }
-
     .about h2 {
         font-size: 2.5rem;
         grid-row: 2;
@@ -797,30 +793,30 @@ h2 {
         font-size: 3rem;
     }
 
-    .me{
+    .me {
         height: 25vh;
     }
 }
-    
+
 @media screen and (max-width: 1024px) {
 
-    .home {
-        height: 75vh;
-    }
-
-    .about{
-        height: 75vh;
-    }
 
     .container {
         width: 100vw;
-        height: 100vh;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(18, 1fr);
         grid-gap: 0;
         margin: 0;
         padding: 0;
+    }
+
+    header {
+        font-size: 2rem;
+    }
+
+    footer div p, a{
+        font-size: 2rem;
     }
 
     .home h1 {
@@ -855,10 +851,6 @@ h2 {
         margin-top: 1rem;
     }
 
-    .about {
-        height: 76vh;
-    }
-
     .about h2 {
         font-size: 2.5rem;
         grid-row: 2;
@@ -868,29 +860,22 @@ h2 {
         font-size: 3rem;
     }
 
-    .me{
-        height: 25vh;
-    }
 
     .aboutlouis p {
         font-size: 1.2rem;
     }
 
 }
-    
+
 @media screen and (max-width: 1280px) {
 
-    .home {
-        height: 75vh;
-    }
-
-    .about{
-        height: 75vh;
+    .home,
+    .about {
+        height: 100vh;
     }
 
     .container {
         width: 100vw;
-        height: 100vh;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(18, 1fr);
@@ -900,16 +885,11 @@ h2 {
     }
 
     .home h1 {
-        font-size: 3rem;
+        font-size: 5rem;
     }
 
     .home p {
-        font-size: 3rem;
-    }
-
-    header {
-        height: 10vh;
-        width: 100vw;
+        font-size: 4rem;
     }
 
     button {
@@ -931,10 +911,6 @@ h2 {
         margin-top: 1rem;
     }
 
-    .about {
-        height: 76vh;
-    }
-
     .about h2 {
         font-size: 2.5rem;
         grid-row: 2;
@@ -944,14 +920,9 @@ h2 {
         font-size: 3rem;
     }
 
-    .me{
-        height: 50vh;
-    }
 
     .aboutlouis p {
         font-size: 1.2rem;
     }
 
-}
-    
 }
