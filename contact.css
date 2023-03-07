@@ -17,6 +17,7 @@ body {
     display: table-cell;
     vertical-align: middle;
     width: 50vw;
+    height: 100vh;
 }
 
 header {
