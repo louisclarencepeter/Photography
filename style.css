@@ -20,7 +20,7 @@ body {
     display: table-cell;
     vertical-align: middle;
     height: 100vh;
-    width: 50vw;
+    width: 80vw;
 }
 
 header {
@@ -190,6 +190,7 @@ ul {
 .home,
 .about {
     height: 75vh;
+    width: 80vw;
 }
 
 .socials {
