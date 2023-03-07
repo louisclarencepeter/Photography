@@ -30,9 +30,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-header {
+    padding: 0 3rem;
     font-size: 2rem;
 }
 
@@ -54,6 +52,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 3rem;
 }
 
 footer p {
@@ -328,6 +327,7 @@ h2 {
 }
 
 .container {
+    width: 80vh;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 20rem, 30rem, 40rem, 50rem, 20rem, 20rem, 20rem, 30rem, 50rem, 50rem, 50rem, 20rem, 30rem, 40rem, 50rem, 20rem, 20rem, 20rem, 30rem, 50rem, 50rem, 50rem;
