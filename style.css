@@ -670,6 +670,12 @@ h2 {
         margin: unset;
     }
 
+    .home,
+    .about,
+    .contact {
+        width: 100vw;
+    }
+
 
     .about {
         display: grid;
@@ -761,6 +767,12 @@ h2 {
         height: max-content;
     }
 
+    .home,
+    .about,
+    .contact {
+        width: 100vw;
+    }
+
     .container {
         width: 100vw;
         display: grid;
@@ -832,6 +844,12 @@ h2 {
         grid-gap: 0;
         margin: 0;
         padding: 0;
+    }
+
+    .home,
+    .about,
+    .contact {
+        width: 100vw;
     }
 
     header {
