@@ -245,14 +245,14 @@ ul {
     grid-row: 9 / 11;
     background-image: url(./images/IMG_4699.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 
 .item6 {
     grid-column: 7 / 10;
     grid-row: 8 / 11;
     background-image: url(./images/IMG_1683.jpg);
-    background-position: center;
+    background-position: top;
     background-size: cover;
 }
 
@@ -270,7 +270,6 @@ ul {
     background-image: url(./images/IMG_3733.jpg);
     background-size: cover;
     background-position: center;
-    background-size: cover;
 }
 
 .back-to-top {
