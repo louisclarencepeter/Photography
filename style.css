@@ -20,6 +20,7 @@ body {
     display: table-cell;
     vertical-align: middle;
     height: 100vh;
+    width: 80vw;
 }
 
 header {
@@ -188,7 +189,8 @@ ul {
 
 .home,
 .about {
-    height: 75vh;
+    height: 88vh;
+    width: 80vw;
 }
 
 .socials {
@@ -330,6 +332,7 @@ h2 {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 20rem, 30rem, 40rem, 50rem, 20rem, 20rem, 20rem, 30rem, 50rem, 50rem, 50rem, 20rem, 30rem, 40rem, 50rem, 20rem, 20rem, 20rem, 30rem, 50rem, 50rem, 50rem;
     gap: 1rem;
+    width: 80vw;
 }
 
 .container img {
