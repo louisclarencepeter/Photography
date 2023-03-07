@@ -10,23 +10,26 @@
 
 html {
     font-size: 62.5%;
-    display: table;
+    display: flex;
     margin: 0 auto;
 }
 
 body {
     line-height: 1.5;
     background-color: #004643;
-    display: table-cell;
-    vertical-align: middle;
-    height: 100vh;
+    justify-content: center;
+    align-items: center;
     width: 80vw;
 }
 
 .about {
     font-size: 2rem;
-    height: 100vh;
     width: 100vw;
+}
+
+.home,
+.about {
+    width: 80vw;
 }
 
 header {
@@ -193,11 +196,6 @@ ul {
     grid-template-rows: repeat(10, 1fr);
 }
 
-.home,
-.about {
-    height: 87vh;
-    width: 80vw;
-}
 
 .socials {
     grid-column: 2 / 4;
@@ -209,7 +207,7 @@ ul {
 }
 
 .socials a {
-font-size: 6rem;
+    font-size: 6rem;
 }
 
 .item1 {
@@ -342,6 +340,10 @@ h2 {
     grid-template-rows: 20rem, 30rem, 40rem, 50rem, 20rem, 20rem, 20rem, 30rem, 50rem, 50rem, 50rem, 20rem, 30rem, 40rem, 50rem, 20rem, 20rem, 20rem, 30rem, 50rem, 50rem, 50rem;
     gap: 1rem;
     width: 80vw;
+}
+
+.container div {
+    display: grid;
 }
 
 .container img {
@@ -669,16 +671,6 @@ h2 {
 
 @media screen and (max-width: 480px) {
 
-    html {
-        display: unset;
-        margin: unset;
-    }
-
-    body {
-        display: unset;
-        margin: unset;
-    }
-
     .home,
     .about,
     .contact {
@@ -692,9 +684,6 @@ h2 {
         grid-template-rows: repeat(9, 10rem);
     }
 
-    .about {
-        height: unset;
-    }
 
     .socials {
         grid-row: 1/2;
@@ -925,11 +914,6 @@ h2 {
 }
 
 @media screen and (max-width: 1280px) {
-
-    .home,
-    .about {
-        height: 100vh;
-    }
 
     .container {
         width: 100vw;
