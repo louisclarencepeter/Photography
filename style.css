@@ -195,7 +195,7 @@ ul {
 
 .home,
 .about {
-    height: 88vh;
+    height: 87vh;
     width: 80vw;
 }
 
@@ -206,6 +206,10 @@ ul {
     justify-content: center;
     align-items: center;
     font-size: 5rem;
+}
+
+.socials a {
+font-size: 6rem;
 }
 
 .item1 {
