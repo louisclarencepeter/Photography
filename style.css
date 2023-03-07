@@ -328,7 +328,7 @@ h2 {
 }
 
 .container {
-    width: 80vw;
+    width: 50vw;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 20rem, 30rem, 40rem, 50rem, 20rem, 20rem, 20rem, 30rem, 50rem, 50rem, 50rem, 20rem, 30rem, 40rem, 50rem, 20rem, 20rem, 20rem, 30rem, 50rem, 50rem, 50rem;
