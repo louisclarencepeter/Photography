@@ -18,13 +18,13 @@ body {
     background-color: #004643;
 }
 
-main{
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     width: 100%;
+    height: 100%;
 }
 
 header {
@@ -131,7 +131,7 @@ form p {
     text-align: center;
 }
 
-.socials i{
+.socials i {
     color: #fff3ec;
     font-size: 5rem;
 }
@@ -143,7 +143,7 @@ form p {
     padding: 5rem;
 }
 
-textarea{
+textarea {
     height: 10rem;
     padding: 1rem;
     margin: 1rem;
@@ -153,7 +153,7 @@ textarea{
 }
 
 .send {
-    width:15rem;
+    width: 15rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,15 +174,15 @@ textarea{
 
 @media screen and (min-width: 768px) {
 
-    body{
+    body {
         height: 100vh;
     }
 
-    main{
+    main {
         height: 100%;
     }
 
-    header{
+    header {
         font-size: 3rem;
     }
 
@@ -191,19 +191,20 @@ textarea{
         height: 4rem;
     }
 
-    footer div p, a{
+    footer div p,
+    a {
         font-size: 3rem;
     }
 
-    form{
+    form {
         font-size: 3rem;
     }
 
-    form p{
+    form p {
         font-size: 3rem;
     }
 
-    .socials i{
+    .socials i {
         font-size: 10rem;
     }
 
@@ -211,10 +212,8 @@ textarea{
 
 @media screen and (min-width: 1024px) {
 
-    body{
-        height: 80vh;
+    body {
         width: 80vw;
         margin: 0 auto;
     }
-
 }
