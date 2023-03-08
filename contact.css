@@ -169,3 +169,33 @@ textarea{
     background-color: #f9bc60;
     color: #fffffe;
 }
+
+@media screen and (min-width: 768px) {
+
+
+    header{
+        font-size: 3rem;
+    }
+
+    .logo img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    footer div p, a{
+        font-size: 3rem;
+    }
+
+    form{
+        font-size: 3rem;
+    }
+
+    form p{
+        font-size: 3rem;
+    }
+
+    .socials i{
+        font-size: 10rem;
+    }
+
+}

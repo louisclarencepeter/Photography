@@ -158,3 +158,33 @@ section div ul li a i {
     align-items: center;
     font-size: 3rem;
 }
+
+@media screen and (min-width: 768px) {
+
+    main{
+        height: 100vh;
+    }
+
+    header{
+        font-size: 3rem;
+    }
+
+    .logo img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    footer div p, a{
+        font-size: 3rem;
+    }
+
+    .i{
+        width: 4rem;
+        height: 4rem;
+    }
+
+    p{
+        font-size: 2.5rem;
+    }
+
+}

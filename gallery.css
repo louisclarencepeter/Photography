@@ -452,3 +452,25 @@ main img {
     grid-column: 4 / 8;
     grid-row: 15 / 16;
 }
+
+@media screen and (min-width: 768px) {
+
+
+    header{
+        font-size: 3rem;
+    }
+
+    .logo img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    footer div p, a{
+        font-size: 3rem;
+    }
+
+    .back-to-top {
+        font-size: 3rem;
+    }
+
+}
