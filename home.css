@@ -250,10 +250,6 @@ h1 {
         height: 100vh;
     }
 
-    main{
-        height: 100%;
-    }
-
     header{
         font-size: 3rem;
     }
@@ -280,7 +276,7 @@ h1 {
 
     body{
         height: 80vh;
-        width: 70vw;
+        width: 100vw;
         margin: 0 auto;
     }
 

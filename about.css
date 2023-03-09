@@ -167,10 +167,6 @@ section div ul li a i {
         height: 100vh;
     }
 
-    main{
-        height: 100%;
-    }
-
     header{
         font-size: 3rem;
     }
@@ -198,13 +194,13 @@ section div ul li a i {
 @media screen and (min-width: 1024px) {
 
     body{
-        width: 70vw;
+        width: 100vw;
         margin: 0 auto;
     }
-
+/* 
     main{
         height: 80vh;
-    }
+    } */
 }
 
 @media screen and (min-width: 1279px) {
@@ -218,6 +214,7 @@ section div ul li a i {
         height: unset;
     }
 }
+
 
 @media screen and (min-width: 1440px) {
 
