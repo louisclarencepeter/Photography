@@ -198,12 +198,11 @@ section div ul li a i {
 @media screen and (min-width: 1024px) {
 
     body{
-        height: 80vh;
         width: 70vw;
         margin: 0 auto;
     }
 
     main{
-        height: unset;
+        height: 80vh;
     }
 }
