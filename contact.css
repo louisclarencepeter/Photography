@@ -207,10 +207,6 @@ textarea {
         width: 100vw;
         margin: 0 auto;
     }
-
-/*     main {
-        height: 80vh;
-    } */
 }
 
 @media screen and (min-width: 1279px) {
@@ -218,10 +214,6 @@ textarea {
     body {
         width: 100vw;
         margin: 0 auto;
-    }
-
-    main {
-        height: unset;
     }
 }
     
