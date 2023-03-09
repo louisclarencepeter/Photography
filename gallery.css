@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    font-family: 'Indie Flower', cursive;
     font-family: 'Tilt Warp', cursive;
 }
 
@@ -62,7 +61,7 @@ footer p {
     text-align: center;
     margin: 0;
     padding: 0;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Tilt Warp', cursive;
 }
 
 
@@ -81,7 +80,7 @@ li {
 a {
     text-decoration: none;
     color: #fff3ec;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Tilt Warp', cursive;
 }
 
 ul {
