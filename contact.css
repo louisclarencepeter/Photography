@@ -204,7 +204,11 @@ textarea {
 @media screen and (min-width: 1024px) {
 
     body {
-        width: 80vw;
+        width: 70vw;
         margin: 0 auto;
+    }
+
+    main {
+        height: 80vh;
     }
 }

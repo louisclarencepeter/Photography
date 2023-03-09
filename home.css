@@ -181,11 +181,11 @@ h1 {
 }
 
 .item1 {
-    grid-column: 1 / 3;
+    grid-column: 1 / 4;
     grid-row: 1 / 3;
-    background-image: url(./images/IMG_6039.jpg);
+    background-image: url(./images/IMG_6022.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 
 .item2 {
@@ -280,7 +280,7 @@ h1 {
 
     body{
         height: 80vh;
-        width: 80vw;
+        width: 70vw;
         margin: 0 auto;
     }
 
