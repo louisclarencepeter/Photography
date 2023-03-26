@@ -177,15 +177,15 @@ h1 {
 .item1 {
     grid-column: 1 / 4;
     grid-row: 1 / 3;
-    background-image: url(./images/IMG_6022.jpg);
+    background-image: url(./images/IMG_7771.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
 }
 
 .item2 {
     grid-column: 5/ 7;
     grid-row: 2 / 4;
-    background-image: url(./images/IMG_5282.jpg);
+    background-image: url(./images/IMG_2887.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -193,9 +193,9 @@ h1 {
 .item3 {
     grid-column: 2 / 5;
     grid-row: 3/ 6;
-    background-image: url(./images/IMG_0080.jpg);
+    background-image: url(./images/IMG_7018.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 
 .item4 {
@@ -209,15 +209,15 @@ h1 {
 .item5 {
     grid-column: 2/ 5;
     grid-row: 9 / 11;
-    background-image: url(./images/IMG_4699.jpg);
+    background-image: url(./images/IMG_2469.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
 }
 
 .item6 {
     grid-column: 7 / 10;
     grid-row: 8 / 11;
-    background-image: url(./images/IMG_1683.jpg);
+    background-image: url(./images/IMG_5958.jpg);
     background-position: top;
     background-size: cover;
 }
@@ -233,7 +233,7 @@ h1 {
 .item8 {
     grid-column: 1 / 3;
     grid-row: 5 / 9;
-    background-image: url(./images/IMG_3733.jpg);
+    background-image: url(./images/IMG_8473.jpg);
     background-size: cover;
     background-position: center;
 }
