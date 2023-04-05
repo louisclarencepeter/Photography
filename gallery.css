@@ -494,7 +494,11 @@ main img {
 @media screen and (min-width: 1440px) {
 
     body{
-        width: 50vw;
+        width: 90vw;
         margin: 0 auto;
     }
+}
+
+@media  screen and (min-width: 1920px) {
+    
 }
