@@ -103,70 +103,7 @@ ul {
 }
 
 
-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fffffe;
-    padding: 0 2rem;
-    box-shadow: 0.125rem 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(00.625rem);
-    font-size: 1.5rem;
-}
-
-form p {
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.socials i {
-    color: #fff3ec;
-    font-size: 5rem;
-}
-
-.socials {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 5rem;
-}
-
-textarea {
-    height: 10rem;
-    padding: 1rem;
-    margin: 1rem;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1.5rem;
-}
-
-.send {
-    width: 15rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    margin: 1rem;
-    background-color: #fffffe;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1.5rem;
-    color: #001e1d;
-}
-
-.send:hover {
-    background-color: #f9bc60;
-    color: #fffffe;
-}
 
 @media screen and (min-width: 768px) {
 
