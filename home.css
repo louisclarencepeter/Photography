@@ -238,6 +238,30 @@ h1 {
     background-position: center;
 }
 
+.info {
+    text-align: center;
+    box-shadow: 0.125rem 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(00.625rem);
+    padding: 0.625rem;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff3ec;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #fff3ec;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
 @media screen and (min-width: 768px) {
 
     body{
