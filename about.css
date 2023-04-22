@@ -17,7 +17,7 @@ body {
     background-color: #004643;
 }
 
-main{
+.about {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(10, 1fr);
@@ -100,14 +100,14 @@ ul {
     color: #f9bc60;
 }
 
-main {
+.about {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-section{
+.about section{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -115,7 +115,7 @@ section{
     width: 100%;
 }
 
-article {
+.about article {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,12 +123,12 @@ article {
     padding: 0 3rem;
 }
 
-img {
+.about img {
     width: 100%;
     height: 100%;
 }
 
-p{
+.about p{
     font-size: 1.5rem;
     color: #fff3ec;
     text-align: center;
@@ -144,14 +144,14 @@ h2 {
     padding: 0;
 }
 
-section div ul {
+.about section div ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-section div ul li a i {
+.about section div ul li a i {
     display: flex;
     flex-direction: row;
     justify-content: center;
