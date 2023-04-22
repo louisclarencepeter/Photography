@@ -11,18 +11,6 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    font-size: 2rem;
-    line-height: 1.5;
-    background-color: #004643;
-}
-
-main{
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-}
-
 header {
     width: 100%;
     height: 10rem;
@@ -40,6 +28,19 @@ header {
     height: 2rem;
     border-radius: 50%;
 }
+
+body {
+    font-size: 2rem;
+    line-height: 1.5;
+    background-color: #004643;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+}
+
 
 footer div p,
 a {

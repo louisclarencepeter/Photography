@@ -17,11 +17,6 @@ body {
     background-color: #004643;
 }
 
-.main {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-}
 
 header {
     width: 100%;
@@ -39,6 +34,25 @@ header {
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 2rem;
+}
+
+section {
+    grid-column: 1 / 9;
+    grid-row: 2 / 9;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 footer div p,
@@ -245,7 +259,7 @@ h1 {
     align-items: center;
 }
 
-.about section{
+.about section {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -266,7 +280,7 @@ h1 {
     height: 100%;
 }
 
-.about p{
+.about p {
     font-size: 1.5rem;
     color: #fff3ec;
     text-align: center;
@@ -316,7 +330,7 @@ h2 {
     padding: 0.625rem;
     border-radius: 0.625rem;
     background-color: rgba(255, 255, 255, 0.125);
-    width: 30%;
+    width: 40%;
 }
 
 .info img {
@@ -331,7 +345,7 @@ h2 {
     font-weight: 700;
     color: #fff3ec;
     text-align: center;
-    margin: 0;
+    margin: 1rem 0;
     padding: 0;
 }
 
@@ -348,8 +362,13 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 1 rem;
 }
 
+.titles {
+    font-size: 3rem;
+    margin: 3rem;
+}
 
 form {
     display: flex;
