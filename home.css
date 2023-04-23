@@ -252,6 +252,36 @@ h1 {
     background-position: center;
 }
 
+.video-section {
+    position: relative;
+    height: 30vh;
+    overflow: hidden;
+    margin: 7rem 0 0 0;
+}
+
+.video-section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 30%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.video-section h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff3ec;
+    font-size: 5rem;
+    font-weight: 700;
+    z-index: 1;
+}
+
 .about {
     display: flex;
     flex-direction: column;
