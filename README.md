@@ -18,8 +18,8 @@ This project was created using HTML and CSS.
 The website consists of the following pages:
 
 - Home: A landing page with an introduction to Louis Peter and his photography services.
-  About: A page with more information about Louis Peter and his photography background.
-  Contact: A page with a form for users to contact Louis Peter for photography services.
+  + About: A page with more information about Louis Peter and his photography background.
+  + Contact: A page with a form for users to contact Louis Peter for photography services.
 - Portfolio/Gallery: A page showcasing Louis Peter's photography portfolio.
 
 
