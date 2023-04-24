@@ -1,16 +1,31 @@
+README.md
+
 # Louis Peter Photography
 
-This is a photography portfolio website for Louis Peter. It is a responsive website that is built with HTML5 and CSS3. It is hosted on GitHub Pages.
+This project is a website for Louis Peter Photography, showcasing his portfolio and services.
 
-## Built with
+## Table of Contents
 
-This project was built using these technologies:
+- [Technologies](#technologies)
+- [Contributing](#contributing)
 
-- HTML5
-- CSS3
+## Technologies
 
-## Security Policy
-Please refer to the [security policy](SECURITY.md) here
+This project was created using HTML and CSS.
+
+## Contents
+
+The website consists of the following pages:
+
+- Home: A landing page with an introduction to Louis Peter and his photography services.
+  + About: A section with more information about Louis Peter and his photography background.
+  + Contact: A section with a form for users to contact Louis Peter for photography services.
+- Portfolio/Gallery: A page showcasing Louis Peter's photography portfolio.
+
+
+## Contributing
+
+If you would like to contribute to this project, you can fork the repository and submit a pull request.
 
 ## Progress
 
