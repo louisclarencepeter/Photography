@@ -271,7 +271,7 @@ h1 {
     transform: translate(-50%, -50%);
     min-width:100%;
     min-height: 100%;
-    width: auto;
+    width: 100vw;
     height: auto;
     z-index: -1;
 }
@@ -518,4 +518,9 @@ textarea {
             width: 50vw;
             margin: 0 auto;
         }
+
+        p {
+            font-size: 3rem;
+        }
+
 }
