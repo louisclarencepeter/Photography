@@ -1,7 +1,6 @@
 # Louis Peter Photography
 
-This is a photography portfolio website for Louis Peter. It is a responsive website that is built with HTML5 and CSS3. It is hosted on GitHub Pages.
-
+This is a photography portfolio website for Louis Peter. It is a responsive website that is built with HTML5 and CSS3.
 ## Built with
 
 This project was built using these technologies:
