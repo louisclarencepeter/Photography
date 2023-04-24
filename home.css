@@ -273,19 +273,8 @@ h1 {
     min-height: 100%;
     width: 100vw;
     height: auto;
-    z-index: -1;
 }
 
-.video-section h2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff3ec;
-    font-size: 3rem;
-    font-weight: 700;
-    z-index: 1;
-}
 
 .about {
     display: flex;
@@ -381,15 +370,12 @@ h2 {
     color: #fff3ec;
     text-align: center;
     margin: 1rem 0;
-    padding: 0;
 }
 
 p {
     font-size: 1.5rem;
     color: #fff3ec;
     text-align: center;
-    margin: 0;
-    padding: 0;
 }
 
 .contact {
@@ -491,6 +477,10 @@ textarea {
     .p3 {
         font-size: 4rem;
     }
+
+    .btn {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -499,6 +489,15 @@ textarea {
         height: 100vh;
         width: 100vw;
         margin: 0 auto;
+    }
+
+    .video-section  {
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    .video p {
+        width: 70vw;
     }
 
 }
