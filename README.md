@@ -7,6 +7,7 @@ This project is a website for Louis Peter Photography, showcasing his portfolio 
 ## Table of Contents
 
 - [Technologies](#technologies)
+- [Contents](#contents])
 - [Contributing](#contributing)
 
 ## Technologies
