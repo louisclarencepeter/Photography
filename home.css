@@ -259,7 +259,7 @@ h1 {
 
 .video-section {
     position: relative;
-    height: 30vh;
+    height: 60vh;
     overflow: hidden;
 }
 
@@ -270,8 +270,9 @@ h1 {
     transform: translate(-50%, -50%);
     min-width:100%;
     min-height: 100%;
-    width: 100vw;
+    width: 100vh;
     height: auto;
+    margin: 0 auto;
 }
 
 
