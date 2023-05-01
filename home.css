@@ -305,14 +305,6 @@ h1 {
     border-radius: 1%;
 }
 
-.about p {
-    font-size: 1.5rem;
-    color: #fff3ec;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
 h2 {
     font-size: 2.5rem;
     color: #fff3ec;
@@ -510,12 +502,17 @@ textarea {
 @media screen and (min-width: 1921px) {
     
         body {
-            width: 50vw;
+            width: 60vw;
             margin: 0 auto;
         }
 
         p {
-            font-size: 3rem;
+            font-size: 2rem;
         }
 
+        .video-section {
+            width: 60vw;
+            height: 60vh;
+            margin: 0 auto;
+        }
 }
