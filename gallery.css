@@ -1,16 +1,20 @@
+/* Set box-sizing to border-box and font-family to "Oswald", sans-serif */
 * {
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
 }
 
+/* Set font-size of root element to a combination of 1.6rem + 0.5vw, 1.6rem, 2.4rem */
 .root {
   font-size: calc(1.6rem + 0.5vw, 1.6rem, 2.4rem);
 }
 
+/* Set font-size of html element to 62.5% */
 html {
   font-size: 62.5%;
 }
 
+/* Set width and height of header element to 100% and 10rem respectively, set background-color to #004643, display flex, justify-content to space-between, align-items to center, padding to 0 3rem, font-size to 1.5rem and font-weight to 200 */
 header {
   width: 100%;
   height: 10rem;
@@ -23,29 +27,34 @@ header {
   font-weight: 200;
 }
 
+/* Set width and height of logo img element to 2rem and 2rem respectively and set border-radius to 50% */
 .logo img {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
 }
 
+/* Set font-size of body element to 2rem and line-height to 1.5, set background-color to #004643 */
 body {
   font-size: 2rem;
   line-height: 1.5;
   background-color: #004643;
 }
 
+/* Set display of main element to grid, set grid-template-columns to repeat 8 times with 1fr each and set grid-template-rows to repeat 10 times with 1fr each */
 main {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(10, 1fr);
 }
 
+/* Set font-size of footer div p and a elements to 1.5rem */
 footer div p,
 a {
   font-size: 1.5rem;
 }
 
+/* Set width and height of footer element to 100% and 10rem respectively, set display to flex, justify-content to space-between, align-items to center, padding to 0 3rem and font-weight to 200 */
 footer {
   width: 100%;
   height: 10rem;
@@ -56,6 +65,7 @@ footer {
   font-weight: 200;
 }
 
+/* Set font-size of footer p element to 1.5rem, color to #fff3ec, text-align to center, margin and padding to 0 */
 footer p {
   font-size: 1.5rem;
   color: #fff3ec;
@@ -64,23 +74,28 @@ footer p {
   padding: 0;
 }
 
+/* Set color of button a element to #001e1d */
 button a {
   color: #001e1d;
 }
 
+/* Set background-color of button element to #fffffe when hovered */
 button:hover {
   background-color: #fffffe;
 }
 
+/* Set list-style of li element to none */
 li {
   list-style: none;
 }
 
+/* Set text-decoration of a element to none and color to #fff3ec */
 a {
   text-decoration: none;
   color: #fff3ec;
 }
 
+/* Set padding and margin of ul element to 0, set display to flex, justify-content to space-between and width to 100% */
 ul {
   padding: 0;
   margin: 0;
@@ -90,15 +105,18 @@ ul {
   gap: 1rem;
 }
 
+/* Set width and height of i element to 2rem */
 .i {
   width: 2rem;
   height: 2rem;
 }
 
+/* Set color of i element to #f9bc60 when hovered */
 .i:hover {
   color: #f9bc60;
 }
 
+/* Set position of back-to-top element to fixed, bottom to 50px, z-index to 99, font-size to 16px, border to none, outline to none, color to #fff, cursor to pointer, padding to 10px 15px, border-radius to 4px, left to 50%, transform to translateX(-50%) */
 .back-to-top {
   position: fixed;
   bottom: 50px;
@@ -114,10 +132,12 @@ ul {
   transform: translateX(-50%);
 }
 
+/* Set background-color of back-to-top element to #f9bc60 when hovered */
 .back-to-top:hover {
   background-color: #f9bc60;
 }
 
+/* Set up the main grid */
 main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -127,16 +147,19 @@ main {
   gap: 1rem;
 }
 
+/* Set up the div grid */
 main div {
   display: grid;
 }
 
+/* Set up the image properties */
 main img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
+/* Set up the grid for each picture */
 .pic1 {
   grid-column: 1 / 5;
   grid-row: 1 / 2;
