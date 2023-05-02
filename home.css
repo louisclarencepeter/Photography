@@ -377,16 +377,10 @@ form {
     justify-content: center;
     align-items: center;
     color: #fffffe;
-    padding: 0 2rem;
+    padding:2rem;
     box-shadow: 0.125rem 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(00.625rem);
     font-size: 1.5rem;
-}
-
-/* Styles for contact form description */
-form p {
-    font-size: 1.5rem;
-    text-align: center;
 }
 
 /* Styles for social media icons */
@@ -515,18 +509,54 @@ footer p {
 }
 
 @media screen and (min-width: 1921px) {
+
     body {
         width: 60vw;
         margin: 0 auto;
     }
 
+    .main {
+        width: 60vw;
+        height: 94vh;
+        margin: 0 auto;
+    }
+
     p {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .titles {
+        font-size: 4rem;
     }
 
     .video-section {
         width: 60vw;
-        height: 60vh;
+        height: 50vh;
         margin: 0 auto;
+    }
+
+    label {
+        font-size: 3rem;
+    }
+
+    textarea {
+        height: 20rem;
+        width: 50rem;
+    }
+
+    input {
+        width: 50rem;
+        height: 5rem;
+        font-size: 3rem;
+    }
+
+    .send {
+        width: 20rem;
+        height: 5rem;
+        font-size: 3rem;
     }
 }
