@@ -25,6 +25,7 @@ body {
     line-height: 1.5;
     background-color: #004643;
 }
+
 /* Remove list-style for li element */
 li {
     list-style: none;
@@ -37,7 +38,7 @@ a {
 }
 
 a:hover {
-    color:  #f9bc60;
+    color: #f9bc60;
 }
 
 /* Remove padding and margin for ul element and set display, justify-content and width */
