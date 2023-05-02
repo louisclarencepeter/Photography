@@ -506,6 +506,22 @@ footer p {
         width: 100vw;
         margin: 0 auto;
     }
+
+    .main {
+        height: 85vh;
+        margin: 0 auto;
+    }
+
+    h1,
+    .p1,
+    .p2,
+    .p3{
+        font-size: 6rem;
+    }
+
+    p {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (min-width: 1921px) {
@@ -521,7 +537,10 @@ footer p {
         margin: 0 auto;
     }
 
-    h1 {
+    h1,
+    .p1,
+    .p2,
+    .p3{
         font-size: 8rem;
     }
 
