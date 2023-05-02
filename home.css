@@ -124,7 +124,7 @@ button a {
 }
 
 /* Set background-color for button on hover */
-button:hover {
+.btn:hover {
     background-color: #f9bc60;
     color: #fffffe;
 }
