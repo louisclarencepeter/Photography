@@ -499,6 +499,14 @@ footer p {
         width: 90vw;
         margin: 0 auto;
     }
+
+    input, textarea {
+        width: 20rem;
+    }
+
+    footer div p, a {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (min-width: 1279px) {
