@@ -460,7 +460,7 @@ footer p {
     }
 
     header {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .logo img {
@@ -470,7 +470,7 @@ footer p {
 
     footer div p,
     a {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     h1 {
@@ -516,7 +516,7 @@ footer p {
     }
 
     .main {
-        height: 94vh;
+        height: 85vh;
         margin: 0 auto;
     }
 
@@ -599,8 +599,8 @@ footer p {
     }
 
     .video-section {
-        width: 60vw;
-        height: 50vh;
+        width: 50vw;
+        height: 40vh;
         margin: 0 auto;
     }
 
