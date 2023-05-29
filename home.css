@@ -24,6 +24,7 @@ html {
 body {
     line-height: 1.5;
     background-color: #004643;
+    overflow-x: hidden;
 }
 
 /* Remove list-style for li element */
@@ -377,7 +378,7 @@ form {
     justify-content: center;
     align-items: center;
     color: #fffffe;
-    padding:2rem;
+    padding: 2rem;
     box-shadow: 0.125rem 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(00.625rem);
     font-size: 1.5rem;
@@ -500,11 +501,13 @@ footer p {
         margin: 0 auto;
     }
 
-    input, textarea {
+    input,
+    textarea {
         width: 20rem;
     }
 
-    footer div p, a {
+    footer div p,
+    a {
         font-size: 3rem;
     }
 }
@@ -516,14 +519,14 @@ footer p {
     }
 
     .main {
-        height: 85vh;
+        height: 86vh;
         margin: 0 auto;
     }
 
     h1,
     .p1,
     .p2,
-    .p3{
+    .p3 {
         font-size: 6rem;
     }
 
@@ -582,7 +585,7 @@ footer p {
     h1,
     .p1,
     .p2,
-    .p3{
+    .p3 {
         font-size: 8rem;
     }
 
