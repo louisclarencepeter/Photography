@@ -78,7 +78,6 @@ header {
     grid-template-rows: repeat(10, 1fr);
     gap: 2rem;
     height: 92vh;
-    width: 98vw;
 }
 
 /* Set grid-column, grid-row, border-radius, padding, margin, display, flex-direction, justify-content, gap for section element */
@@ -277,7 +276,8 @@ h1 {
 
 .videop{
     width: 80vw;
-    margin: 0 auto;
+    margin: 3rem auto;
+
 }
 
 /* Set display, flex-direction, justify-content, and align-items for about article */
