@@ -24,6 +24,8 @@ html {
 body {
     line-height: 1.5;
     background-color: #004643;
+    margin: 0;
+    padding: 0;
 }
 
 /* Remove list-style for li element */
@@ -275,7 +277,7 @@ h1 {
 }
 
 .videop {
-    width: 80vw;
+    width: 90vw;
     margin: 2rem auto;
 }
 
@@ -496,7 +498,6 @@ footer p {
 @media screen and (min-width: 1024px) {
     body {
         height: 100vh;
-        width: 100vw;
         margin: 0 auto;
     }
 
