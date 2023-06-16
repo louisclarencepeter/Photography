@@ -179,6 +179,29 @@ h1 {
     background-position: center;
 }
 
+.main div {
+    border-radius: 0.625rem;
+}
+
+/* CSS animation styles */
+@keyframes imageAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* CSS rules for the image */
+.item {
+    /*width: 200px;*/
+    animation: imageAnimation 1s ease-in-out;
+}
+
 /* Set grid column and row for item 1 */
 .item1 {
     grid-column: 1 / 4;
@@ -612,7 +635,7 @@ footer p {
         margin: 0 auto;
     }
 
-    .videop{
+    .videop {
         width: 50vw;
     }
 
