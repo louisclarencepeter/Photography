@@ -290,6 +290,19 @@ h1 {
     align-items: center;
 }
 
+/* CSS styles for the objects */
+.scroll-appear {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s, transform 0.5s;
+}
+
+/* CSS styles for the active objects */
+.scroll-appear-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Set display, flex-direction, justify-content, and align-items for about section */
 .about section {
     display: flex;

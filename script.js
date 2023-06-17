@@ -1,15 +1,15 @@
-/* window.onload = function() {
-    // This code will execute when the website finishes loading
+document.addEventListener('scroll', function() {
+  const objects = document.querySelectorAll('.scroll-appear');
+
+  // Loop through each object
+  for (const i = 0; i < objects.length; i++) {
+    const object = objects[i];
+    const objectPosition = object.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
     
-    // Find the image element
-    const image = document.getElementsByClassName("item");
-    
-    // Add a class to trigger the animation
-    image.classList.add("animate");
-    
-    // Scale the image back to its original size after it has loaded
-    image.onload = function() {
-      image.style.transform = "scale(1)";
-    };
-  };
-   */
+    // Check if the object is in the viewport
+    if (objectPosition - windowHeight <= 0) {
+      object.classList.add('scroll-appear-active'); // Add active class to trigger appearance animation
+    }
+  }
+});
