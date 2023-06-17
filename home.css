@@ -183,25 +183,6 @@ h1 {
     border-radius: 0.625rem;
 }
 
-/* CSS animation styles */
-@keyframes imageAnimation {
-    0% {
-        opacity: 0;
-        transform: scale(0.5);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* CSS rules for the image */
-.item {
-    /*width: 200px;*/
-    animation: imageAnimation 1s ease-in-out;
-}
-
 /* Set grid column and row for item 1 */
 .item1 {
     grid-column: 1 / 4;
@@ -290,18 +271,6 @@ h1 {
     align-items: center;
 }
 
-/* CSS styles for the objects */
-.scroll-appear {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s, transform 0.5s;
-}
-
-/* CSS styles for the active objects */
-.scroll-appear-active {
-    opacity: 1;
-    transform: translateY(0);
-}
 
 /* Set display, flex-direction, justify-content, and align-items for about section */
 .about section {
@@ -332,6 +301,28 @@ h1 {
     height: 100%;
     border-radius: 0.625rem;
 }
+
+@media (max-width: 900px){
+    section h1{
+      font-size: 2rem;
+      text-align: center;
+    }
+    section .text-container{
+      flex-direction: column;
+    }
+  }
+  
+  .reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
 
 /* Set display, flex-direction, justify-content, and align-items for about section div ul */
 .about section div ul {
