@@ -118,11 +118,22 @@ button {
     justify-content: center;
     align-items: center;
     margin: 1rem auto;
+    animation: scale 2s infinite;
+    animation: fade-in 0.8s 2s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 /* Set color for button a element */
 button a {
     color: #001e1d;
+}
+
+.btn {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 /* Set background-color for button on hover */
@@ -149,21 +160,48 @@ h1,
 /* Set grid-row for h1 element */
 h1 {
     grid-row: 1 / 2;
+    animation: scale 2s infinite;
+    animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 /* Set grid-row for p1 element */
 .p1 {
     grid-row: 3 / 3;
+    animation: scale 2s infinite;
+    animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 /* Set grid-row for p2 element */
 .p2 {
     grid-row: 4 / 4;
+    animation: scale 2s infinite;
+    animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 /* Set grid-row for p3 element */
 .p3 {
     grid-row: 5 / 5;
+    animation: scale 2s infinite;
+    animation: fade-in 0.8s 1.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.moto {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+}
+
+@keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+@keyframes scale {
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Set background size and position for all items */
