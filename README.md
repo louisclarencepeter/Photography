@@ -12,7 +12,7 @@ This project is a website for Louis Peter Photography, showcasing his portfolio 
 
 ## Technologies
 
-This project was created using HTML and CSS.
+This project was created using HTM, CSS and now JavaScript.
 
 ## Contents
 
