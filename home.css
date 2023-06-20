@@ -238,6 +238,19 @@ h1 {
 .item {
     /*width: 200px;*/
     animation: imageAnimation 1s ease-in-out;
+    transition: transform 0.3s;
+}
+
+/* CSS rules for the main div */
+
+.main div {
+    position: relative;
+    display: inline-block;
+}
+
+.main div:hover {
+    transform: scale(1.1);
+    z-index: 2;
 }
 
 /* Set grid column and row for item 1 */
