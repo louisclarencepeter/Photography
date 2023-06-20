@@ -249,8 +249,12 @@ h1 {
 }
 
 .main div:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
     z-index: 2;
+}
+
+.main div:hover .item:hover {
+    transform: scale(1);
 }
 
 /* Set grid column and row for item 1 */
