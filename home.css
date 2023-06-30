@@ -7,7 +7,7 @@
 /* Set font-family to Oswald and source of the font */
 @font-face {
     font-family: "Oswald";
-    src: url("./Oswald-VariableFont_wght.ttf") format("truetype");
+    src: url("./fonts/Oswald-VariableFont_wght.ttf") format("truetype");
 }
 
 /* Set font-size for root element */

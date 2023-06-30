@@ -18,29 +18,3 @@ window.addEventListener("scroll", reveal);
 
 // To check the scroll position on page load
 reveal();
-
-// Maximize the size of the element on hover
-
-function increaseOnHover(className, increaseAmount) {
-  const elements = document.getElementsByClassName(className);
-
-  // Add event listeners to each element with the specified class
-  Array.from(elements).forEach(function(element) {
-    // Store the original size of the element
-    const originalSize = window.getComputedStyle(element).fontSize;
-
-    // Increase the size on hover
-    element.addEventListener("mouseover", function() {
-      element.style.fontSize = parseInt(originalSize) + increaseAmount + "px";
-    });
-
-    // Reset the size when the mouse moves out
-    element.addEventListener("mouseout", function() {
-      element.style.fontSize = originalSize;
-    });
-  });
-}
-
-// Call the function with class name and increase amount
-increaseOnHover("myElement", 4); // Increase size by 4 pixels on hover
-
