@@ -376,6 +376,8 @@ h1 {
     border-radius: 0.625rem;
 }
 
+/* Resposiveness*/
+
 @media (max-width: 900px){
     section h1{
       font-size: 2rem;
