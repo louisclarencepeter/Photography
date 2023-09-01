@@ -33,6 +33,10 @@ li {
     list-style: none;
 }
 
+li:hover {
+    transform: scale(1.2);
+}
+
 /* Remove text-decoration and set color for a element */
 a {
     text-decoration: none;
