@@ -1,0 +1,65 @@
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+button.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 4px;
+    background: white; /* Change this color if necessary */
+    display: block;
+}
+
+.mobile-nav {
+    display: block; 
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out; 
+    width: 100%; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    background-color: red; 
+    padding: 0;
+    padding-top: 70px;
+    margin: 0;
+    z-index: 9;
+}
+
+.mobile-nav li {
+    width: fit-content;
+    margin: 20px auto;
+
+}
+
+.mobile-nav li:hover {
+    transform: none;
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+    button.hamburger {
+        display: flex;
+    }
+
+    .mobile-nav.active {
+        display: block;
+        transform: translateY(0);
+    }
+}

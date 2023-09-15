@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/all.css" />
     <!-- Link to home css file -->
     <link rel="stylesheet" href="./home.css" />
+    <link rel="stylesheet" href="./hamburger.css" />
     <!-- Set the title of the website -->
     <title>Louis Peter Photography</title>
 </head>
@@ -32,16 +33,25 @@
             <a href="#about"><img src="./images/LP-01.jpg" alt="logo" /></a>
         </div>
         <!-- Create a navigation element -->
-        <nav>
-            <!-- Create an unordered list element -->
-            <ul>
-                <!-- Create list items with links to other pages -->
-                <li><a href="./home.html">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="mobile-nav">
+            <!-- Create list items with links to other pages -->
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <ul class="nav">
+            <!-- Create list items with links to other pages -->
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </header>
 
     <!-- Create a main element -->
@@ -109,7 +119,7 @@
                 </h2>
                 <div>
                     <!-- Links to Louis Peter's social media accounts -->
-                    <ul>
+                    <ul class="ul">
                         <li>
                             <a href="https://www.facebook.com/louisclarencepeter" target="_blank"><i
                                     class="fa-brands fa-facebook"></i></a>
@@ -289,7 +299,7 @@
 
             <!-- Social media links -->
             <div class="socials">
-                <ul>
+                <ul class="ul">
                     <li>
                         <a href="https://www.facebook.com/louisclarencepeter" target="_blank"><i
                                 class="fa-brands fa-facebook"></i></a>
@@ -313,7 +323,7 @@
         </div>
         <div>
             <!-- Social media links -->
-            <ul>
+            <ul class="ul">
                 <li>
                     <a href="https://www.facebook.com/louisclarencepeter" target="_blank"><i
                             class="fa-brands fa-facebook"></i></a>

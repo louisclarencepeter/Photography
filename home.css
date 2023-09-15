@@ -48,7 +48,7 @@ a:hover {
 }
 
 /* Remove padding and margin for ul element and set display, justify-content and width */
-ul {
+.ul {
     padding: 0;
     margin: 0;
     display: flex;
@@ -100,13 +100,13 @@ section {
 }
 
 /* Set background-color for button on hover */
-button:hover {
+button.moto:hover {
     background-color: #f9bc60;
     color: #fffffe;
 }
 
 /* Set font-size, font-weight, background-color, border, border-radius, padding, cursor, height, grid-column, grid-row, z-index, display, justify-content, align-items, margin for button element */
-button {
+button.moto {
     font-size: 2.5rem;
     font-weight: 700;
     background-color: #fff3ec;
@@ -127,7 +127,7 @@ button {
 }
 
 /* Set color for button a element */
-button a {
+button.moto a {
     color: #001e1d;
 }
 
