@@ -94,11 +94,6 @@ header {
     margin: 20px;
 }
 
-/* Active state for menu items */
-.navbar .menu-items.active {
-    /* width: 100%; */
-}
-
 /* List item styles */
 .navbar .nav-container li {
     list-style: none;
