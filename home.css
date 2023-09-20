@@ -373,7 +373,7 @@ h1 {
 .item {
     /*width: 200px;*/
     animation: imageAnimation 1s ease-in-out;
-    transition: transform 0.3s;
+    transition: transform 1s;
 }
 
 /* CSS rules for the main div */
