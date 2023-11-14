@@ -54,6 +54,14 @@ a {
   font-size: 1.5rem;
 }
 
+li:hover {
+  transform: scale(1.2);
+}
+
+a:hover {
+  color: #f9bc60;
+}
+
 /* Set width and height of footer element to 100% and 10rem respectively, set display to flex, justify-content to space-between, align-items to center, padding to 0 3rem and font-weight to 200 */
 footer {
   width: 100%;
