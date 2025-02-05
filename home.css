@@ -438,7 +438,8 @@ h1 {
 .info {
     text-align: center;
     box-shadow: 0.125rem 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(00.625rem);
+    -webkit-backdrop-filter: blur(0.625rem);
+    backdrop-filter: blur(0.625rem);
     padding: 0.625rem;
     border-radius: 0.625rem;
     background-color: rgba(255, 255, 255, 0.125);
@@ -493,7 +494,8 @@ form {
     color: #fffffe;
     padding: 2rem;
     box-shadow: 0.125rem 0.125rem 0.125rem 0.125rem rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(00.625rem);
+    -webkit-backdrop-filter: blur(0.625rem);
+    backdrop-filter: blur(0.625rem);
     font-size: 1.5rem;
 }
 
