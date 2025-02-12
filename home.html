@@ -267,20 +267,32 @@
         <h2 class="titles">Drop Me a Message</h2>
 
         <section class="contact" id="contact">
-            <form method="post" action="send_message.php">
-                <!-- Ask user to fill in the form below to send a message -->
-                <p>Please fill in the form below to send me a message</p>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <input type="submit" value="Send" class="send" />
-            </form>
+            <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <!-- Hidden field that Netlify uses to identify your form -->
+            <input type="hidden" name="form-name" value="contact" />
+          
+            <!-- Honey Pot field for spam filtering -->
+            <p class="hidden">
+              <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+            </p>
+          
+            <p>Please fill in the form below to send me a message</p>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+          
+            <input type="submit" value="Send" class="send" />
+          </form>
 
             <!-- Social media links -->
             <div class="socials">

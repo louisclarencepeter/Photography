@@ -746,3 +746,7 @@ footer p {
         font-size: 3rem;
     }
 }
+
+.hidden {
+    display: none;
+  }
