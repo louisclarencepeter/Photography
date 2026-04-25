@@ -2,32 +2,30 @@ README.md
 
 # Louis Peter Photography
 
-This project is a website for Louis Peter Photography, showcasing his portfolio and services.
+This project is now set up as a React portfolio site powered by Vite. It keeps the original photography content, gallery, and contact form, while moving the UI into reusable React components and client-side routes.
 
-## Table of Contents
+## Stack
 
-- [Technologies](#technologies)
-- [Contents](#contents])
-- [Contributing](#contributing)
+- React
+- React Router
+- Vite
+- CSS
 
-## Technologies
+## Pages
 
-This project was created using HTML, CSS and now JavaScript.
+- `/` for the landing page, about section, services, videography, and contact form
+- `/gallery` for the portfolio gallery
+- `/impressum` for legal information
 
-## Contents
+## Development
 
-The website consists of the following pages:
+```bash
+npm install
+npm run dev
+```
 
-- Home: A landing page with an introduction to Louis Peter and his photography services.
-  + About: A section with more information about Louis Peter and his photography background.
-  + Contact: A section with a form for users to contact Louis Peter for photography services.
-- Portfolio/Gallery: A page showcasing Louis Peter's photography portfolio.
+## Production Build
 
-
-## Contributing
-
-If you would like to contribute to this project, you can fork the repository and submit a pull request.
-
-## Progress
-
-![status](https://img.shields.io/badge/status-ongoing-orange?style=flat-square)
+```bash
+npm run build
+```
