@@ -625,6 +625,42 @@ main {
   transform: translateY(0);
 }
 
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .gallery-tile:hover img,
+  .primary-button:hover,
+  .secondary-button:hover,
+  .secondary-link:hover,
+  .back-to-top:hover,
+  .site-nav a:hover,
+  .site-nav a.active,
+  li:hover {
+    transform: none;
+  }
+}
+
 @keyframes fadeUp {
   from {
     opacity: 0;
