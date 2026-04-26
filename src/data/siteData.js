@@ -1,71 +1,7 @@
-const imageModules = import.meta.glob(
-  [
-    "../../images/LP-01.jpg",
-    "../../images/louis.jpg",
-    "../../images/IMG_0310.jpg",
-    "../../images/30241300-F27C-4C36-9A95-A7CD63773185.jpg",
-    "../../images/DJI_0026.jpg",
-    "../../images/DJI_0072.jpg",
-    "../../images/IMG_1199.jpg",
-    "../../images/DJI_0316.jpg",
-    "../../images/DSC_0526.jpg",
-    "../../images/IMG_0064.jpg",
-    "../../images/IMG_0080.jpg",
-    "../../images/IMG_0180.jpg",
-    "../../images/IMG_0208.jpg",
-    "../../images/IMG_0011.jpg",
-    "../../images/IMG_0381.jpg",
-    "../../images/IMG_0507.jpg",
-    "../../images/IMG_0834.jpg",
-    "../../images/IMG_0850.jpg",
-    "../../images/IMG_6390.jpg",
-    "../../images/IMG_1318.jpg",
-    "../../images/IMG_1381.jpg",
-    "../../images/IMG_1683.jpg",
-    "../../images/IMG_3078.jpg",
-    "../../images/IMG_1766.jpg",
-    "../../images/IMG_2887.jpg",
-    "../../images/IMG_1792.jpg",
-    "../../images/IMG_1965.jpg",
-    "../../images/IMG_20210620_224747_006.jpg",
-    "../../images/IMG_1862.jpg",
-    "../../images/IMG_2050.jpg",
-    "../../images/IMG_2062.jpg",
-    "../../images/IMG_1969.jpg",
-    "../../images/IMG_20210427_095438_387.jpg",
-    "../../images/IMG_2192.jpg",
-    "../../images/IMG_2469.jpg",
-    "../../images/IMG_3149.jpg",
-    "../../images/IMG_3952.jpg",
-    "../../images/IMG_3733.jpg",
-    "../../images/IMG_3936.jpg",
-    "../../images/IMG_4097.jpg",
-    "../../images/IMG_4406.jpg",
-    "../../images/IMG_6442.jpg",
-    "../../images/IMG_4500.jpg",
-    "../../images/IMG_4572.jpg",
-    "../../images/IMG_5958.jpg",
-    "../../images/IMG_4588.jpg",
-    "../../images/IMG_4699.jpg",
-    "../../images/IMG_5133.jpg",
-    "../../images/IMG_5282.jpg",
-    "../../images/IMG_5334.jpg",
-    "../../images/IMG_5828.jpg",
-    "../../images/IMG_5907.jpg",
-    "../../images/IMG_6022.jpg",
-    "../../images/IMG_7018.jpg",
-    "../../images/IMG_7154.jpg",
-    "../../images/IMG_7771.jpg",
-    "../../images/IMG_8184.jpg",
-    "../../images/IMG_8473.jpg",
-    "../../images/Öl.jpg",
-    "../../images/IMG_5313.jpg"
-  ],
-  {
-    eager: true,
-    import: "default"
-  }
-);
+const imageModules = import.meta.glob("../../images/*.{jpg,JPG,jpeg,png,webp,avif}", {
+  eager: true,
+  import: "default"
+});
 
 const productModules = import.meta.glob("../../Products/*.{jpg,JPG,jpeg,png,webp,avif}", {
   eager: true,
@@ -109,172 +45,141 @@ export const socialLinks = [
   }
 ];
 
+export const socialPreviewImages = [
+  {
+    src: image("gallery-023.jpg"),
+    alt: "Portrait portfolio highlight by Louis Peter"
+  },
+  {
+    src: image("gallery-052.jpg"),
+    alt: "Lifestyle portfolio highlight by Louis Peter"
+  },
+  {
+    src: image("gallery-003.jpg"),
+    alt: "Aerial portfolio highlight by Louis Peter"
+  }
+];
+
 export const aboutDetails = {
-  logo: image("LP-01.jpg"),
-  portrait: image("louis.jpg"),
-  bio: "With a keen eye for detail and a passion for bringing out the beauty in the world around me, I capture the essence of life through my images. Years of experience have honed a style that blends artistic creativity with technical expertise, whether I am photographing landscapes, portraits, or memorable personal moments.",
-  note: "Note: I am currently not offering photoshoots and am using this space to keep practising and sharing new work."
+  logo: image("louis-peter-logo.jpg"),
+  portrait: image("louis-peter-portrait.jpg"),
+  bio: "I am drawn to light, atmosphere, and the small details that give a moment its feeling. My work blends creativity with technical precision, whether I am photographing portraits, landscapes, travel scenes, or personal milestones.",
+  note: "I am not currently booking photoshoots, but I am using this space to keep creating, refining my craft, and sharing new work."
 };
 
 export const heroImages = [
-  image("IMG_7771.jpg"),
-  image("IMG_2887.jpg"),
-  image("IMG_7018.jpg"),
-  image("IMG_0850.jpg"),
-  image("IMG_2469.jpg"),
-  image("IMG_5958.jpg"),
-  image("IMG_2062.jpg"),
-  image("IMG_0180.jpg")
+  image("gallery-054.jpg"),
+  image("gallery-023.jpg"),
+  image("gallery-052.jpg"),
+  image("gallery-016.jpg"),
+  image("gallery-033.jpg"),
+  image("gallery-043.jpg"),
+  image("gallery-029.jpg"),
+  image("gallery-010.jpg")
 ];
 
 export const videography = {
-  video: video("Baiana.mp4"),
+  video: video("baiana-showreel.mp4"),
   description:
-    "Introducing my videography services, designed to bring your vision to life through captivating visuals and cinematic storytelling. Whether you need a promotional video, coverage for a special event, or a more atmospheric visual piece, I focus on high-quality footage, strong pacing, and the details that make a story feel memorable."
+    "My videography work is shaped by mood, pacing, and visual detail. From promotional pieces to personal events and atmospheric short-form stories, I aim to create films that feel polished, expressive, and memorable."
 };
 
 export const offerings = [
   {
     title: "Weddings",
     description:
-      "Capturing the beauty and joy of your special day with wedding photography that tells your unique love story.",
-    image: product("IMG_6407 (1280x720).jpg")
+      "Elegant, story-led coverage that captures the emotion, atmosphere, and quiet in-between moments of your day.",
+    image: product("service-weddings.jpg")
   },
   {
     title: "Family Photos",
     description:
-      "Family sessions that preserve real moments and create lasting keepsakes across generations.",
-    image: product("IMG_3518 (1280x853).jpg")
+      "Relaxed family sessions that preserve genuine connection and create photographs you will return to for years.",
+    image: product("service-family-photos.jpg")
   },
   {
     title: "Portraits",
     description:
-      "Professional portraits that capture personality and individuality for business, social media, or personal use.",
-    image: product("IMG_3070 (1280x853).jpg")
+      "Natural, polished portraits that reflect personality and presence for personal, professional, or creative use.",
+    image: product("service-portraits.jpg")
   },
   {
     title: "Couples",
     description:
-      "A couples shoot is a beautiful way to celebrate love, connection, anniversaries, or engagement milestones.",
-    image: product("IMG_0868 (1280x853).jpg")
+      "A thoughtful way to capture connection, whether you are celebrating an engagement, an anniversary, or simply this chapter together.",
+    image: product("service-couples.jpg")
   },
   {
     title: "Babies and Children",
     description:
-      "Playful and heartfelt sessions that capture the energy, joy, and warmth of childhood.",
-    image: product("IMG_33641 (1280x853).jpg")
+      "Warm, playful sessions that capture childhood with honesty, energy, and tenderness.",
+    image: product("service-babies-and-children.jpg")
   },
   {
     title: "Events",
     description:
-      "Coverage for birthdays, gatherings, and special occasions with a focus on atmosphere and candid moments.",
-    image: product("IMG_3636 (1280x720).jpg")
+      "Documentary-style coverage of celebrations, gatherings, and special occasions with an eye for mood and candid moments.",
+    image: product("service-events.jpg")
   },
   {
     title: "Pets",
     description:
-      "Pet photography that celebrates personality, character, and the bond you share with your companion.",
-    image: product("IMG_4097 (1280x720).jpg")
+      "Characterful pet portraits that celebrate personality and the bond you share with your companion.",
+    image: product("service-pets.jpg")
   },
   {
     title: "Drone Photography",
     description:
-      "Aerial imagery and video that bring scale, perspective, and a fresh visual angle to your story.",
-    image: product("DJI_0100 (1280x720).jpg")
+      "Aerial photography and video that add scale, perspective, and striking visual context to your story.",
+    image: product("service-drone-photography.jpg")
   },
   {
     title: "Property Photography",
     description:
-      "Clean, professional property imagery that highlights layout, mood, and key architectural details.",
-    image: product("GOPR8550 (1280x960).jpg")
+      "Clean, well-composed imagery that highlights space, light, and architectural detail.",
+    image: product("service-property-photography.jpg")
   }
 ];
 
-const galleryFileNames = [
-  "IMG_0310.jpg",
-  "30241300-F27C-4C36-9A95-A7CD63773185.jpg",
-  "DJI_0026.jpg",
-  "DJI_0072.jpg",
-  "IMG_1199.jpg",
-  "DJI_0316.jpg",
-  "DSC_0526.jpg",
-  "IMG_0064.jpg",
-  "IMG_0080.jpg",
-  "IMG_0180.jpg",
-  "IMG_0208.jpg",
-  "IMG_0011.jpg",
-  "IMG_0381.jpg",
-  "IMG_0507.jpg",
-  "IMG_0834.jpg",
-  "IMG_0850.jpg",
-  "IMG_6390.jpg",
-  "IMG_1318.jpg",
-  "IMG_1381.jpg",
-  "IMG_1683.jpg",
-  "IMG_3078.jpg",
-  "IMG_1766.jpg",
-  "IMG_2887.jpg",
-  "IMG_1792.jpg",
-  "IMG_1965.jpg",
-  "IMG_20210620_224747_006.jpg",
-  "IMG_1862.jpg",
-  "IMG_2050.jpg",
-  "IMG_2062.jpg",
-  "IMG_1969.jpg",
-  "IMG_20210427_095438_387.jpg",
-  "IMG_2192.jpg",
-  "IMG_2469.jpg",
-  "IMG_3149.jpg",
-  "IMG_3952.jpg",
-  "IMG_3733.jpg",
-  "IMG_3936.jpg",
-  "IMG_4097.jpg",
-  "IMG_4406.jpg",
-  "IMG_6442.jpg",
-  "IMG_4500.jpg",
-  "IMG_4572.jpg",
-  "IMG_5958.jpg",
-  "IMG_4588.jpg",
-  "IMG_4699.jpg",
-  "IMG_5133.jpg",
-  "IMG_5282.jpg",
-  "IMG_5334.jpg",
-  "IMG_5828.jpg",
-  "IMG_5907.jpg",
-  "IMG_6022.jpg",
-  "IMG_7018.jpg",
-  "IMG_7154.jpg",
-  "IMG_7771.jpg",
-  "IMG_8184.jpg",
-  "IMG_8473.jpg",
-  "Öl.jpg",
-  "IMG_5313.jpg"
-];
+const galleryFileNames = Array.from({ length: 58 }, (_, index) => {
+  const sequence = String(index + 1).padStart(3, "0");
+  return `gallery-${sequence}.jpg`;
+});
+
+const aerialGalleryFiles = new Set(["gallery-003.jpg", "gallery-004.jpg", "gallery-006.jpg"]);
+
+function defaultAltFor(fileName) {
+  if (aerialGalleryFiles.has(fileName)) {
+    return "Aerial drone photograph by Louis Peter";
+  }
+  return "Louis Peter Photography portfolio image";
+}
 
 export const galleryImages = galleryFileNames.map((fileName) => ({
-  src: image(fileName)
+  src: image(fileName),
+  alt: defaultAltFor(fileName)
 }));
 
 export const legalSections = [
   {
-    heading: "Angaben gemaess § 5 TMG",
+    heading: "Angaben gemäß § 5 TMG",
     paragraphs: [
-      "Louis Peter, Ludwig-Landmann-Strasse 190, 60488 Frankfurt am Main",
+      "Louis Peter, Ludwig-Landmann-Straße 190, 60488 Frankfurt am Main",
       "Vertreten durch: Louis Peter",
       "Kontakt: Telefon 0176-82113705, E-Mail louisclarencepeters@gmail.com"
     ]
   },
   {
-    heading: "Haftung fuer Inhalte",
+    heading: "Haftung für Inhalte",
     paragraphs: [
-      "Die Inhalte dieser Website wurden mit grosster Sorgfalt erstellt. Fuer die Richtigkeit, Vollstaendigkeit und Aktualitaet der Inhalte kann jedoch keine Gewaehr uebernommen werden.",
-      "Als Diensteanbieter ist Louis Peter gemaess § 7 Abs. 1 TMG fuer eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich."
+      "Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden.",
+      "Als Diensteanbieter ist Louis Peter gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich."
     ]
   },
   {
-    heading: "Haftung fuer Links",
+    heading: "Haftung für Links",
     paragraphs: [
-      "Dieses Angebot enthaelt Links zu externen Webseiten Dritter, auf deren Inhalte kein Einfluss besteht. Deshalb kann fuer diese fremden Inhalte auch keine Gewaehr uebernommen werden.",
+      "Dieses Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte kein Einfluss besteht. Deshalb kann für diese fremden Inhalte auch keine Gewähr übernommen werden.",
       "Bei Bekanntwerden von Rechtsverletzungen werden derartige Links umgehend entfernt."
     ]
   },
@@ -282,20 +187,20 @@ export const legalSections = [
     heading: "Urheberrecht",
     paragraphs: [
       "Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.",
-      "Downloads und Kopien dieser Seite sind nur fuer den privaten, nicht kommerziellen Gebrauch gestattet."
+      "Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet."
     ]
   },
   {
     heading: "Datenschutz",
     paragraphs: [
-      "Die Nutzung dieser Website ist in der Regel ohne Angabe personenbezogener Daten moeglich. Soweit personenbezogene Daten erhoben werden, erfolgt dies moeglichst auf freiwilliger Basis.",
-      "Es wird darauf hingewiesen, dass die Datenuebertragung im Internet Sicherheitsluecken aufweisen kann und ein vollstaendiger Schutz vor dem Zugriff durch Dritte nicht moeglich ist."
+      "Die Nutzung dieser Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit personenbezogene Daten erhoben werden, erfolgt dies möglichst auf freiwilliger Basis.",
+      "Es wird darauf hingewiesen, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann und ein vollständiger Schutz vor dem Zugriff durch Dritte nicht möglich ist."
     ]
   },
   {
     heading: "Cookies",
     paragraphs: [
-      "Diese React-Version der Website verwendet derzeit nur lokalen Browser-Speicher, um Ihre Cookie-Auswahl auf diesem Geraet zu merken.",
+      "Diese React-Version der Website verwendet derzeit nur lokalen Browser-Speicher, um Ihre Cookie-Auswahl auf diesem Gerät zu merken.",
       "Es werden aktuell keine Analyse- oder Marketing-Cookies durch die von uns bereitgestellte Banner-Funktion gesetzt."
     ]
   },

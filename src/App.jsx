@@ -8,6 +8,7 @@ import {
   legalSections,
   offerings,
   socialLinks,
+  socialPreviewImages,
   videography
 } from "./data/siteData";
 
@@ -51,7 +52,10 @@ function ScrollManager() {
 function SiteLayout() {
   const location = useLocation();
   const isHome = location.pathname === "/";
+  const activeSection = useActiveSection(location.pathname);
+  const videographyHref = isHome ? "#videography" : "/#videography";
   const aboutHref = isHome ? "#about" : "/#about";
+  const offeringsHref = isHome ? "#offerings" : "/#offerings";
   const contactHref = isHome ? "#contact" : "/#contact";
 
   return (
@@ -63,12 +67,44 @@ function SiteLayout() {
         </NavLink>
 
         <nav className="site-nav" aria-label="Main navigation">
-          <NavLink to="/" end>
+          <NavLink
+            to="/"
+            end
+            className={() => (isHome && activeSection === "home" ? "active" : undefined)}
+          >
             Home
           </NavLink>
-          <a href={aboutHref}>About</a>
-          <NavLink to="/gallery">Gallery</NavLink>
-          <a href={contactHref}>Contact</a>
+          <a
+            href={aboutHref}
+            className={activeSection === "about" ? "active" : undefined}
+            aria-current={activeSection === "about" ? "location" : undefined}
+          >
+            About
+          </a>
+          <a
+            href={offeringsHref}
+            className={activeSection === "offerings" ? "active" : undefined}
+            aria-current={activeSection === "offerings" ? "location" : undefined}
+          >
+            What I Offer
+          </a>
+          <a
+            href={videographyHref}
+            className={activeSection === "videography" ? "active" : undefined}
+            aria-current={activeSection === "videography" ? "location" : undefined}
+          >
+            Videography
+          </a>
+          <a
+            href={contactHref}
+            className={activeSection === "contact" ? "active" : undefined}
+            aria-current={activeSection === "contact" ? "location" : undefined}
+          >
+            Contact
+          </a>
+          <NavLink to="/gallery" className={({ isActive }) => (isActive ? "active" : undefined)}>
+            Gallery
+          </NavLink>
         </nav>
       </header>
 
@@ -96,11 +132,13 @@ function HomePage() {
 
   return (
     <>
-      <section className="hero-section">
+      <section className="hero-section" id="home">
         <div className="hero-copy">
-          <p className="eyebrow">Visual storytelling from Frankfurt</p>
+          <p className="eyebrow">Photography and visual storytelling from Frankfurt</p>
           <h1>Louis Peter Photography</h1>
-          <p className="hero-lead">Visuals for all of your special occasions.</p>
+          <p className="hero-lead">
+            Thoughtful photography for the people, places, and moments that matter most.
+          </p>
           <div className="hero-actions">
             <NavLink to="/gallery" className="primary-button">
               View Gallery
@@ -122,26 +160,11 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="content-block">
-        <SectionHeading
-          title="Videography"
-          subtitle="Cinematic coverage designed to bring your ideas and milestones to life."
-        />
-        <div className="video-layout reveal">
-          <div className="video-frame">
-            <video autoPlay loop muted playsInline controls={false}>
-              <source src={videography.video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <p className="support-copy">{videography.description}</p>
-        </div>
-      </section>
-
       <section className="content-block" id="about">
         <SectionHeading
-          title="About Louis Peter"
-          subtitle="A photographer with a sharp eye for atmosphere, detail, and honest moments."
+          eyebrow="About"
+          title="Meet Louis Peter"
+          subtitle="Photography shaped by atmosphere, detail, and moments that feel honest, natural, and lasting."
         />
         <div className="about-grid reveal">
           <div className="about-image-panel">
@@ -158,10 +181,11 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="content-block">
+      <section className="content-block" id="offerings">
         <SectionHeading
-          title="What I Offer"
-          subtitle="A mix of portrait, event, and lifestyle photography tailored to real people and real stories."
+          eyebrow="Services"
+          title="Photography Services"
+          subtitle="Portrait, event, lifestyle, and location-based photography created with a thoughtful, story-led approach."
         />
         <div className="offer-grid">
           {offerings.map((offering) => (
@@ -174,10 +198,28 @@ function HomePage() {
         </div>
       </section>
 
+      <section className="content-block" id="videography">
+        <SectionHeading
+          eyebrow="Motion"
+          title="Videography"
+          subtitle="Cinematic storytelling for ideas, milestones, and moments that deserve movement, rhythm, and atmosphere."
+        />
+        <div className="video-layout reveal">
+          <div className="video-frame">
+            <video autoPlay loop muted playsInline controls={false}>
+              <source src={videography.video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p className="support-copy">{videography.description}</p>
+        </div>
+      </section>
+
       <section className="content-block" id="contact">
         <SectionHeading
-          title="Drop Me a Message"
-          subtitle="Use the form below to get in touch about a project, idea, or future shoot."
+          eyebrow="Contact"
+          title="Get in Touch"
+          subtitle="If you would like to connect, collaborate, or ask about future availability, you can reach out here."
         />
         <div className="contact-grid reveal">
           <form
@@ -195,7 +237,9 @@ function HomePage() {
               </label>
             </p>
 
-            <p className="form-intro">Please fill in the form below to send me a message.</p>
+            <p className="form-intro">
+              Fill out the form below and I will get back to you as soon as I can.
+            </p>
 
             <label htmlFor="name">Name</label>
             <input id="name" name="name" type="text" required />
@@ -212,10 +256,27 @@ function HomePage() {
           </form>
 
           <aside className="glass-card contact-aside">
+            <div className="contact-visuals">
+              <img
+                src={socialPreviewImages[0].src}
+                alt={socialPreviewImages[0].alt}
+                className="contact-visual contact-visual--feature"
+              />
+              <div className="contact-visual-stack">
+                {socialPreviewImages.slice(1).map((image) => (
+                  <img
+                    key={image.src}
+                    src={image.src}
+                    alt={image.alt}
+                    className="contact-visual"
+                  />
+                ))}
+              </div>
+            </div>
             <h3>Find Me Online</h3>
             <p>
-              You can also reach out through my social channels to follow new work,
-              recent uploads, and portfolio updates.
+              You can also connect through my social channels to follow new work, recent
+              uploads, and portfolio updates.
             </p>
             <SocialLinks />
           </aside>
@@ -229,14 +290,15 @@ function GalleryPage() {
   return (
     <section className="content-block">
       <SectionHeading
-        title="Gallery"
-        subtitle="A curated collection of portrait, travel, landscape, and lifestyle work."
+        eyebrow="Portfolio"
+        title="Selected Work"
+        subtitle="A curated collection of portrait, travel, landscape, and lifestyle images."
       />
 
       <div className="gallery-columns">
-        {galleryImages.map((image, index) => (
+        {galleryImages.map((image) => (
           <figure key={image.src} className="gallery-tile">
-            <img src={image.src} alt={`Portfolio photograph ${index + 1}`} loading="lazy" />
+            <img src={image.src} alt={image.alt} loading="lazy" />
           </figure>
         ))}
       </div>
@@ -252,6 +314,7 @@ function ImpressumPage() {
   return (
     <section className="content-block legal-page">
       <SectionHeading
+        eyebrow="Legal"
         title="Impressum"
         subtitle="Legal information and contact details for Louis Peter Photography."
       />
@@ -270,10 +333,10 @@ function ImpressumPage() {
   );
 }
 
-function SectionHeading({ title, subtitle }) {
+function SectionHeading({ eyebrow = "Portfolio", title, subtitle }) {
   return (
     <div className="section-heading">
-      <p className="eyebrow">Portfolio</p>
+      <p className="eyebrow">{eyebrow}</p>
       <h2>{title}</h2>
       <p>{subtitle}</p>
     </div>
@@ -366,6 +429,51 @@ function useRevealOnScroll() {
 
     return () => observer.disconnect();
   }, []);
+}
+
+function useActiveSection(pathname) {
+  const [activeSection, setActiveSection] = useState(pathname === "/" ? "home" : null);
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      setActiveSection(null);
+      return undefined;
+    }
+
+    const sectionIds = ["home", "about", "offerings", "videography", "contact"];
+
+    function updateActiveSection() {
+      const offset = 160;
+      let currentSection = "home";
+
+      for (const sectionId of sectionIds) {
+        const section = document.getElementById(sectionId);
+
+        if (!section) {
+          continue;
+        }
+
+        if (section.getBoundingClientRect().top <= offset) {
+          currentSection = sectionId;
+        }
+      }
+
+      setActiveSection(currentSection);
+    }
+
+    const frame = window.requestAnimationFrame(updateActiveSection);
+
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
+  }, [pathname]);
+
+  return activeSection;
 }
 
 const iconMap = {
