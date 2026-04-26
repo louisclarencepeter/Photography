@@ -216,7 +216,15 @@ function HomePage() {
         />
         <div className="video-layout reveal">
           <div className="video-frame">
-            <video autoPlay loop muted playsInline controls={false}>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls={false}
+              preload="metadata"
+              poster={videography.poster}
+            >
               <source src={videography.video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>

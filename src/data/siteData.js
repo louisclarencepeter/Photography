@@ -21,11 +21,6 @@ const productPictureModules = import.meta.glob("../../Products/*.{jpg,JPG,jpeg,p
   import: "default"
 });
 
-const videoModules = import.meta.glob("../../video/*.{mp4,webm,ogg}", {
-  eager: true,
-  import: "default"
-});
-
 function resolveAsset(modules, folder, fileName) {
   const match = Object.entries(modules).find(([path]) => path.endsWith(`/${folder}/${fileName}`));
 
@@ -40,7 +35,6 @@ const imagePicture = (fileName) => resolveAsset(imagePictureModules, "images", f
 const imageHero = (fileName) => resolveAsset(imageHeroModules, "images", fileName);
 const imageRaw = (fileName) => resolveAsset(imageRawModules, "images", fileName);
 const productPicture = (fileName) => resolveAsset(productPictureModules, "Products", fileName);
-const video = (fileName) => resolveAsset(videoModules, "video", fileName);
 
 export const socialLinks = [
   {
@@ -94,7 +88,8 @@ export const heroImages = [
 ];
 
 export const videography = {
-  video: video("baiana-showreel.mp4"),
+  video: "/video/baiana-showreel.mp4",
+  poster: imageHero("gallery-029.jpg"),
   description:
     "My videography work is shaped by mood, pacing, and visual detail. From promotional pieces to personal events and atmospheric short-form stories, I aim to create films that feel polished, expressive, and memorable."
 };
