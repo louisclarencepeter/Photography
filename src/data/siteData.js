@@ -1,9 +1,22 @@
-const imageModules = import.meta.glob("../../images/*.{jpg,JPG,jpeg,png,webp,avif}", {
+const imagePictureModules = import.meta.glob("../../images/*.{jpg,JPG,jpeg,png}", {
+  query: { w: "480;960;1600", format: "avif;webp;jpg", as: "picture" },
   eager: true,
   import: "default"
 });
 
-const productModules = import.meta.glob("../../Products/*.{jpg,JPG,jpeg,png,webp,avif}", {
+const imageHeroModules = import.meta.glob("../../images/*.{jpg,JPG,jpeg,png}", {
+  query: { w: "1280", format: "webp", as: "src" },
+  eager: true,
+  import: "default"
+});
+
+const imageRawModules = import.meta.glob("../../images/louis-peter-logo.{jpg,JPG,jpeg,png}", {
+  eager: true,
+  import: "default"
+});
+
+const productPictureModules = import.meta.glob("../../Products/*.{jpg,JPG,jpeg,png}", {
+  query: { w: "480;960;1600", format: "avif;webp;jpg", as: "picture" },
   eager: true,
   import: "default"
 });
@@ -23,8 +36,10 @@ function resolveAsset(modules, folder, fileName) {
   return match[1];
 }
 
-const image = (fileName) => resolveAsset(imageModules, "images", fileName);
-const product = (fileName) => resolveAsset(productModules, "Products", fileName);
+const imagePicture = (fileName) => resolveAsset(imagePictureModules, "images", fileName);
+const imageHero = (fileName) => resolveAsset(imageHeroModules, "images", fileName);
+const imageRaw = (fileName) => resolveAsset(imageRawModules, "images", fileName);
+const productPicture = (fileName) => resolveAsset(productPictureModules, "Products", fileName);
 const video = (fileName) => resolveAsset(videoModules, "video", fileName);
 
 export const socialLinks = [
@@ -47,35 +62,35 @@ export const socialLinks = [
 
 export const socialPreviewImages = [
   {
-    src: image("gallery-023.jpg"),
+    picture: imagePicture("gallery-023.jpg"),
     alt: "Portrait portfolio highlight by Louis Peter"
   },
   {
-    src: image("gallery-052.jpg"),
+    picture: imagePicture("gallery-052.jpg"),
     alt: "Lifestyle portfolio highlight by Louis Peter"
   },
   {
-    src: image("gallery-003.jpg"),
+    picture: imagePicture("gallery-003.jpg"),
     alt: "Aerial portfolio highlight by Louis Peter"
   }
 ];
 
 export const aboutDetails = {
-  logo: image("louis-peter-logo.jpg"),
-  portrait: image("louis-peter-portrait.jpg"),
+  logo: imageRaw("louis-peter-logo.jpg"),
+  portrait: imagePicture("louis-peter-portrait.jpg"),
   bio: "I am drawn to light, atmosphere, and the small details that give a moment its feeling. My work blends creativity with technical precision, whether I am photographing portraits, landscapes, travel scenes, or personal milestones.",
   note: "I am not currently booking photoshoots, but I am using this space to keep creating, refining my craft, and sharing new work."
 };
 
 export const heroImages = [
-  image("gallery-054.jpg"),
-  image("gallery-023.jpg"),
-  image("gallery-052.jpg"),
-  image("gallery-016.jpg"),
-  image("gallery-033.jpg"),
-  image("gallery-043.jpg"),
-  image("gallery-029.jpg"),
-  image("gallery-010.jpg")
+  imageHero("gallery-054.jpg"),
+  imageHero("gallery-023.jpg"),
+  imageHero("gallery-052.jpg"),
+  imageHero("gallery-016.jpg"),
+  imageHero("gallery-033.jpg"),
+  imageHero("gallery-043.jpg"),
+  imageHero("gallery-029.jpg"),
+  imageHero("gallery-010.jpg")
 ];
 
 export const videography = {
@@ -89,55 +104,55 @@ export const offerings = [
     title: "Weddings",
     description:
       "Elegant, story-led coverage that captures the emotion, atmosphere, and quiet in-between moments of your day.",
-    image: product("service-weddings.jpg")
+    image: productPicture("service-weddings.jpg")
   },
   {
     title: "Family Photos",
     description:
       "Relaxed family sessions that preserve genuine connection and create photographs you will return to for years.",
-    image: product("service-family-photos.jpg")
+    image: productPicture("service-family-photos.jpg")
   },
   {
     title: "Portraits",
     description:
       "Natural, polished portraits that reflect personality and presence for personal, professional, or creative use.",
-    image: product("service-portraits.jpg")
+    image: productPicture("service-portraits.jpg")
   },
   {
     title: "Couples",
     description:
       "A thoughtful way to capture connection, whether you are celebrating an engagement, an anniversary, or simply this chapter together.",
-    image: product("service-couples.jpg")
+    image: productPicture("service-couples.jpg")
   },
   {
     title: "Babies and Children",
     description:
       "Warm, playful sessions that capture childhood with honesty, energy, and tenderness.",
-    image: product("service-babies-and-children.jpg")
+    image: productPicture("service-babies-and-children.jpg")
   },
   {
     title: "Events",
     description:
       "Documentary-style coverage of celebrations, gatherings, and special occasions with an eye for mood and candid moments.",
-    image: product("service-events.jpg")
+    image: productPicture("service-events.jpg")
   },
   {
     title: "Pets",
     description:
       "Characterful pet portraits that celebrate personality and the bond you share with your companion.",
-    image: product("service-pets.jpg")
+    image: productPicture("service-pets.jpg")
   },
   {
     title: "Drone Photography",
     description:
       "Aerial photography and video that add scale, perspective, and striking visual context to your story.",
-    image: product("service-drone-photography.jpg")
+    image: productPicture("service-drone-photography.jpg")
   },
   {
     title: "Property Photography",
     description:
       "Clean, well-composed imagery that highlights space, light, and architectural detail.",
-    image: product("service-property-photography.jpg")
+    image: productPicture("service-property-photography.jpg")
   }
 ];
 
@@ -156,7 +171,7 @@ function defaultAltFor(fileName) {
 }
 
 export const galleryImages = galleryFileNames.map((fileName) => ({
-  src: image(fileName),
+  picture: imagePicture(fileName),
   alt: defaultAltFor(fileName)
 }));
 

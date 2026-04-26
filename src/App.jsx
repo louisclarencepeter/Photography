@@ -168,7 +168,12 @@ function HomePage() {
         />
         <div className="about-grid reveal">
           <div className="about-image-panel">
-            <img src={aboutDetails.portrait} alt="Louis Peter" />
+            <ResponsiveImage
+              picture={aboutDetails.portrait}
+              alt="Louis Peter"
+              sizes="(max-width: 960px) 100vw, 45vw"
+              loading="lazy"
+            />
           </div>
           <article className="glass-card about-card">
             <SocialLinks />
@@ -190,7 +195,12 @@ function HomePage() {
         <div className="offer-grid">
           {offerings.map((offering) => (
             <article key={offering.title} className="glass-card service-card reveal">
-              <img src={offering.image} alt={offering.title} />
+              <ResponsiveImage
+                picture={offering.image}
+                alt={offering.title}
+                sizes="(max-width: 680px) 100vw, (max-width: 960px) 50vw, 30vw"
+                loading="lazy"
+              />
               <h3>{offering.title}</h3>
               <p>{offering.description}</p>
             </article>
@@ -257,18 +267,22 @@ function HomePage() {
 
           <aside className="glass-card contact-aside">
             <div className="contact-visuals">
-              <img
-                src={socialPreviewImages[0].src}
+              <ResponsiveImage
+                picture={socialPreviewImages[0].picture}
                 alt={socialPreviewImages[0].alt}
                 className="contact-visual contact-visual--feature"
+                sizes="(max-width: 680px) 100vw, 25vw"
+                loading="lazy"
               />
               <div className="contact-visual-stack">
-                {socialPreviewImages.slice(1).map((image) => (
-                  <img
-                    key={image.src}
-                    src={image.src}
-                    alt={image.alt}
+                {socialPreviewImages.slice(1).map((preview) => (
+                  <ResponsiveImage
+                    key={preview.alt}
+                    picture={preview.picture}
+                    alt={preview.alt}
                     className="contact-visual"
+                    sizes="(max-width: 680px) 100vw, 20vw"
+                    loading="lazy"
                   />
                 ))}
               </div>
@@ -296,9 +310,14 @@ function GalleryPage() {
       />
 
       <div className="gallery-columns">
-        {galleryImages.map((image) => (
-          <figure key={image.src} className="gallery-tile">
-            <img src={image.src} alt={image.alt} loading="lazy" />
+        {galleryImages.map((galleryImage, index) => (
+          <figure key={index} className="gallery-tile">
+            <ResponsiveImage
+              picture={galleryImage.picture}
+              alt={galleryImage.alt}
+              sizes="(max-width: 680px) 100vw, (max-width: 960px) 50vw, 33vw"
+              loading="lazy"
+            />
           </figure>
         ))}
       </div>
@@ -330,6 +349,29 @@ function ImpressumPage() {
         ))}
       </article>
     </section>
+  );
+}
+
+function ResponsiveImage({ picture, alt, className, sizes, loading, ...rest }) {
+  const sources = picture.sources ?? {};
+  const fallback = picture.img ?? {};
+
+  return (
+    <picture>
+      {sources.avif && <source type="image/avif" srcSet={sources.avif} sizes={sizes} />}
+      {sources.webp && <source type="image/webp" srcSet={sources.webp} sizes={sizes} />}
+      {sources.jpg && <source type="image/jpeg" srcSet={sources.jpg} sizes={sizes} />}
+      <img
+        src={fallback.src}
+        width={fallback.w}
+        height={fallback.h}
+        alt={alt}
+        loading={loading}
+        sizes={sizes}
+        className={className}
+        {...rest}
+      />
+    </picture>
   );
 }
 
