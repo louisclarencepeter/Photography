@@ -526,6 +526,20 @@ main {
   margin: 0 auto;
 }
 
+.not-found-page {
+  max-width: 64rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-top: 2rem;
+}
+
 .legal-card {
   display: grid;
   gap: 1rem;

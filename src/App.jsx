@@ -21,10 +21,29 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/impressum" element={<ImpressumPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </>
   );
+}
+
+function usePageMeta({ title, description, lang = "en" }) {
+  useEffect(() => {
+    if (title) {
+      document.title = title;
+    }
+
+    document.documentElement.lang = lang;
+
+    if (description) {
+      const meta = document.querySelector('meta[name="description"]');
+
+      if (meta) {
+        meta.setAttribute("content", description);
+      }
+    }
+  }, [title, description, lang]);
 }
 
 function ScrollManager() {
@@ -129,6 +148,11 @@ function SiteLayout() {
 
 function HomePage() {
   useRevealOnScroll();
+  usePageMeta({
+    title: "Louis Peter Photography",
+    description:
+      "Louis Peter Photography portfolio — portrait, event, drone, and lifestyle photography from Frankfurt."
+  });
 
   return (
     <>
@@ -309,6 +333,12 @@ function HomePage() {
 }
 
 function GalleryPage() {
+  usePageMeta({
+    title: "Gallery — Louis Peter Photography",
+    description:
+      "Selected portrait, travel, landscape, and lifestyle photographs from the Louis Peter Photography portfolio."
+  });
+
   return (
     <section className="content-block">
       <SectionHeading
@@ -338,6 +368,13 @@ function GalleryPage() {
 }
 
 function ImpressumPage() {
+  usePageMeta({
+    title: "Impressum — Louis Peter Photography",
+    description:
+      "Rechtliche Angaben und Kontaktdaten für Louis Peter Photography in Frankfurt am Main.",
+    lang: "de"
+  });
+
   return (
     <section className="content-block legal-page">
       <SectionHeading
@@ -356,6 +393,31 @@ function ImpressumPage() {
           </section>
         ))}
       </article>
+    </section>
+  );
+}
+
+function NotFoundPage() {
+  usePageMeta({
+    title: "Page Not Found — Louis Peter Photography",
+    description: "The page you are looking for could not be found."
+  });
+
+  return (
+    <section className="content-block not-found-page">
+      <SectionHeading
+        eyebrow="404"
+        title="Page Not Found"
+        subtitle="The page you are looking for has moved or never existed. Try the home page or the gallery instead."
+      />
+      <div className="not-found-actions">
+        <NavLink to="/" className="primary-button">
+          Back to Home
+        </NavLink>
+        <NavLink to="/gallery" className="secondary-link">
+          View Gallery
+        </NavLink>
+      </div>
     </section>
   );
 }
