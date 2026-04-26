@@ -79,6 +79,9 @@ function SiteLayout() {
 
   return (
     <div className="site-shell" id="top">
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
       <header className="site-header">
         <NavLink to="/" className="brand-mark" aria-label="Louis Peter Photography home">
           <img src={aboutDetails.logo} alt="Louis Peter Photography logo" />
@@ -127,7 +130,7 @@ function SiteLayout() {
         </nav>
       </header>
 
-      <main>
+      <main id="main">
         <Outlet />
       </main>
 
@@ -553,36 +556,28 @@ function useActiveSection(pathname) {
     }
 
     const sectionIds = ["home", "about", "offerings", "videography", "contact"];
+    const sections = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
 
-    function updateActiveSection() {
-      const offset = 160;
-      let currentSection = "home";
-
-      for (const sectionId of sectionIds) {
-        const section = document.getElementById(sectionId);
-
-        if (!section) {
-          continue;
-        }
-
-        if (section.getBoundingClientRect().top <= offset) {
-          currentSection = sectionId;
-        }
-      }
-
-      setActiveSection(currentSection);
+    if (sections.length === 0) {
+      return undefined;
     }
 
-    const frame = window.requestAnimationFrame(updateActiveSection);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-150px 0px -75% 0px" }
+    );
 
-    window.addEventListener("scroll", updateActiveSection, { passive: true });
-    window.addEventListener("resize", updateActiveSection);
+    sections.forEach((section) => observer.observe(section));
 
-    return () => {
-      window.cancelAnimationFrame(frame);
-      window.removeEventListener("scroll", updateActiveSection);
-      window.removeEventListener("resize", updateActiveSection);
-    };
+    return () => observer.disconnect();
   }, [pathname]);
 
   return activeSection;
