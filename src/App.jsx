@@ -21,6 +21,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/impressum" element={<ImpressumPage />} />
+          <Route path="/thanks" element={<ThanksPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
@@ -271,6 +272,7 @@ function HomePage() {
             className="glass-card contact-form"
             name="contact"
             method="POST"
+            action="/thanks"
             data-netlify="true"
             netlify-honeypot="bot-field"
           >
@@ -396,6 +398,31 @@ function ImpressumPage() {
           </section>
         ))}
       </article>
+    </section>
+  );
+}
+
+function ThanksPage() {
+  usePageMeta({
+    title: "Thank You — Louis Peter Photography",
+    description: "Thank you for getting in touch. I will reply as soon as I can."
+  });
+
+  return (
+    <section className="content-block not-found-page">
+      <SectionHeading
+        eyebrow="Thank You"
+        title="Message Received"
+        subtitle="Thanks for reaching out. I will get back to you as soon as I can. In the meantime, feel free to keep exploring."
+      />
+      <div className="not-found-actions">
+        <NavLink to="/" className="primary-button">
+          Back to Home
+        </NavLink>
+        <NavLink to="/gallery" className="secondary-link">
+          View Gallery
+        </NavLink>
+      </div>
     </section>
   );
 }
