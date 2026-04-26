@@ -89,7 +89,7 @@ export const heroImages = [
 
 export const videography = {
   video: "/video/baiana-showreel.mp4",
-  poster: imageHero("gallery-029.jpg"),
+  poster: "/video/baiana-showreel-poster.jpg",
   description:
     "My videography work is shaped by mood, pacing, and visual detail. From promotional pieces to personal events and atmospheric short-form stories, I aim to create films that feel polished, expressive, and memorable."
 };
