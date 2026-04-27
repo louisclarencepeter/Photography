@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import ScrollManager from "./components/ScrollManager";
 import SiteLayout from "./components/SiteLayout";
+import ThemeManager from "./components/ThemeManager";
 import HomePage from "./pages/HomePage";
 import GalleryPage from "./pages/GalleryPage";
 import ImpressumPage from "./pages/ImpressumPage";
@@ -10,6 +11,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 function App() {
   return (
     <>
+      <ThemeManager />
       <ScrollManager />
       <Routes>
         <Route element={<SiteLayout />}>

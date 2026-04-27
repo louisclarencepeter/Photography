@@ -10,6 +10,31 @@
     <meta name="keywords" content="Louis Peter Photography Frankfurt" />
     <meta name="author" content="Louis Peter" />
     <meta name="theme-color" content="#004643" />
+    <script>
+      (() => {
+        let savedTheme = null;
+        try {
+          const theme = window.localStorage.getItem("lp-theme-preference");
+          savedTheme = theme === "light" || theme === "dark" ? theme : null;
+        } catch {}
+
+        const supportsPreference = typeof window.matchMedia === "function";
+        const darkPreference =
+          supportsPreference && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const lightPreference =
+          supportsPreference && window.matchMedia("(prefers-color-scheme: light)").matches;
+        const hour = new Date().getHours();
+        const timeTheme = hour >= 7 && hour < 19 ? "light" : "dark";
+        const theme = savedTheme ?? (darkPreference ? "dark" : lightPreference ? "light" : timeTheme);
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+        if (themeColor) {
+          themeColor.setAttribute("content", theme === "light" ? "#f7efe7" : "#004643");
+        }
+      })();
+    </script>
     <link
       rel="preload"
       href="/fonts/Oswald-VariableFont_wght.ttf"

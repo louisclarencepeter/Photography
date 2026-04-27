@@ -4,6 +4,7 @@ import { useActiveSection } from "../hooks";
 import ResponsiveImage from "./ResponsiveImage";
 import SocialLinks from "./SocialLinks";
 import CookieConsent from "./CookieConsent";
+import ThemeSwitch from "./ThemeSwitch";
 
 function SiteLayout() {
   const location = useLocation();
@@ -83,7 +84,10 @@ function SiteLayout() {
             Impressum
           </NavLink>
         </div>
-        <SocialLinks />
+        <div className="footer-actions">
+          <ThemeSwitch />
+          <SocialLinks />
+        </div>
       </footer>
 
       <CookieConsent />
