@@ -47,7 +47,7 @@ function HomePage() {
               <ResponsiveImage
                 picture={heroImage.picture}
                 alt={heroImage.alt}
-                sizes="(max-width: 960px) 100vw, 50vw"
+                sizes="(max-width: 680px) 45vw, (max-width: 960px) 48vw, 24vw"
                 loading={index < 3 ? "eager" : "lazy"}
               />
             </div>

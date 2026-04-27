@@ -44,7 +44,7 @@ function CookieConsent() {
           Accept
         </button>
         <NavLink to="/impressum" className="text-link cookie-link">
-          Learn More
+          Cookie Details
         </NavLink>
       </div>
     </aside>

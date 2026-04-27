@@ -1,18 +1,13 @@
 import galleryEntries from "./galleryEntries.json";
 
 const imagePictureModules = import.meta.glob("../../images/*.{jpg,JPG,jpeg,png}", {
-  query: { w: "480;960;1600", format: "avif;webp;jpg", as: "picture" },
-  eager: true,
-  import: "default"
-});
-
-const imageRawModules = import.meta.glob("../../images/louis-peter-logo.{jpg,JPG,jpeg,png}", {
+  query: { w: "160;320;480;960;1600", format: "avif;webp;jpg", as: "picture" },
   eager: true,
   import: "default"
 });
 
 const productPictureModules = import.meta.glob("../../Products/*.{jpg,JPG,jpeg,png}", {
-  query: { w: "480;960;1600", format: "avif;webp;jpg", as: "picture" },
+  query: { w: "160;320;480;960;1600", format: "avif;webp;jpg", as: "picture" },
   eager: true,
   import: "default"
 });
@@ -28,7 +23,6 @@ function resolveAsset(modules, folder, fileName) {
 }
 
 const imagePicture = (fileName) => resolveAsset(imagePictureModules, "images", fileName);
-const imageRaw = (fileName) => resolveAsset(imageRawModules, "images", fileName);
 const productPicture = (fileName) => resolveAsset(productPictureModules, "Products", fileName);
 
 export const socialLinks = [
@@ -65,7 +59,7 @@ export const socialPreviewImages = [
 ];
 
 export const aboutDetails = {
-  logo: imageRaw("louis-peter-logo.jpg"),
+  logo: imagePicture("louis-peter-logo.jpg"),
   portrait: imagePicture("louis-peter-portrait.jpg"),
   bio: "I am drawn to light, atmosphere, and the small details that give a moment its feeling. My work blends creativity with technical precision, whether I am photographing portraits, landscapes, travel scenes, or personal milestones."
 };
@@ -83,7 +77,7 @@ export const heroImages = [
 
 export const videography = {
   video: "/video/baiana-showreel.mp4",
-  poster: "/video/baiana-showreel-poster.jpg",
+  poster: "/video/baiana-showreel-poster.webp",
   description:
     "My videography work is shaped by mood, pacing, and visual detail. From promotional pieces to personal events and atmospheric short-form stories, I aim to create films that feel polished, expressive, and memorable."
 };

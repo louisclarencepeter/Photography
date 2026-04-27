@@ -1,6 +1,7 @@
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { aboutDetails } from "../data/siteData";
 import { useActiveSection } from "../hooks";
+import ResponsiveImage from "./ResponsiveImage";
 import SocialLinks from "./SocialLinks";
 import CookieConsent from "./CookieConsent";
 
@@ -20,7 +21,12 @@ function SiteLayout() {
       </a>
       <header className="site-header">
         <NavLink to="/" className="brand-mark" aria-label="Louis Peter Photography home">
-          <img src={aboutDetails.logo} alt="Louis Peter Photography logo" />
+          <ResponsiveImage
+            picture={aboutDetails.logo}
+            alt="Louis Peter Photography logo"
+            sizes="46px"
+            loading="eager"
+          />
           <span>Louis Peter Photography</span>
         </NavLink>
 
