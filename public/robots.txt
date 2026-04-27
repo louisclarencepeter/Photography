@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://louispeterphotography.netlify.app/sitemap.xml
+Sitemap: https://louisclarencepeter.com/sitemap.xml

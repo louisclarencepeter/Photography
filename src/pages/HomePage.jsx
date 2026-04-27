@@ -67,7 +67,6 @@ function HomePage() {
           <article className="glass-card about-card">
             <SocialLinks />
             <p>{aboutDetails.bio}</p>
-            <p className="note-text">{aboutDetails.note}</p>
             <NavLink to="/impressum" className="text-link">
               Impressum
             </NavLink>
