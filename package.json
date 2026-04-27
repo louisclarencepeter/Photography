@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "node scripts/generate-image-sitemap.mjs",
     "preview": "vite preview",
     "lint": "eslint ."
   },

@@ -39,12 +39,18 @@ function HomePage() {
         </div>
 
         <div className="hero-collage" aria-hidden="true">
-          {heroImages.map((image, index) => (
+          {heroImages.map((heroImage, index) => (
             <div
-              key={image}
+              key={index}
               className={`hero-card hero-card--${index + 1}`}
-              style={{ backgroundImage: `url(${image})` }}
-            />
+            >
+              <ResponsiveImage
+                picture={heroImage.picture}
+                alt={heroImage.alt}
+                sizes="(max-width: 960px) 100vw, 50vw"
+                loading={index < 3 ? "eager" : "lazy"}
+              />
+            </div>
           ))}
         </div>
       </section>

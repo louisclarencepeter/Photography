@@ -1,7 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import ResponsiveImage from "./ResponsiveImage";
 
+const SWIPE_THRESHOLD = 50;
+const VERTICAL_TOLERANCE = 80;
+
 function Lightbox({ images, index, onClose, onPrev, onNext }) {
+  const touchStartRef = useRef(null);
+
   useEffect(() => {
     function handleKeyDown(event) {
       if (event.key === "Escape") {
@@ -23,6 +28,39 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
     };
   }, [onClose, onPrev, onNext]);
 
+  function handleTouchStart(event) {
+    if (event.touches.length !== 1) {
+      touchStartRef.current = null;
+      return;
+    }
+    touchStartRef.current = {
+      x: event.touches[0].clientX,
+      y: event.touches[0].clientY
+    };
+  }
+
+  function handleTouchEnd(event) {
+    const start = touchStartRef.current;
+    touchStartRef.current = null;
+
+    if (!start || event.changedTouches.length === 0) {
+      return;
+    }
+
+    const dx = event.changedTouches[0].clientX - start.x;
+    const dy = event.changedTouches[0].clientY - start.y;
+
+    if (Math.abs(dy) > VERTICAL_TOLERANCE) {
+      return;
+    }
+
+    if (dx <= -SWIPE_THRESHOLD) {
+      onNext();
+    } else if (dx >= SWIPE_THRESHOLD) {
+      onPrev();
+    }
+  }
+
   const current = images[index];
 
   return (
@@ -32,6 +70,8 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
       aria-modal="true"
       aria-label="Photograph viewer"
       onClick={onClose}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
     >
       <div className="lightbox-stage" onClick={(event) => event.stopPropagation()}>
         <ResponsiveImage
