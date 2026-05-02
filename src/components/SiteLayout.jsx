@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { aboutDetails } from "../data/siteData";
 import { useActiveSection } from "../hooks";
@@ -15,27 +16,53 @@ function SiteLayout() {
   const offeringsHref = isHome ? "#offerings" : "/#offerings";
   const contactHref = isHome ? "#contact" : "/#contact";
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Close menu on route change
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+
+  // Close menu on anchor link click
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className="site-shell" id="top">
       <a href="#main" className="skip-link">
         Skip to content
       </a>
-      <header className="site-header">
-        <NavLink to="/" className="brand-mark" aria-label="Louis Peter Photography home">
-          <ResponsiveImage
-            picture={aboutDetails.logo}
-            alt="Louis Peter Photography logo"
-            sizes="46px"
-            loading="eager"
-          />
-          <span>Louis Peter Photography</span>
-        </NavLink>
+      <header className={`site-header${isMenuOpen ? " menu-open" : ""}`}>
+        <div className="header-mobile-bar">
+          <NavLink to="/" className="brand-mark" aria-label="Louis Peter Photography home" onClick={handleNavClick}>
+            <ResponsiveImage
+              picture={aboutDetails.logo}
+              alt="Louis Peter Photography logo"
+              sizes="46px"
+              loading="eager"
+            />
+            <span>Louis Peter Photography</span>
+          </NavLink>
 
-        <nav className="site-nav" aria-label="Main navigation">
+          <button 
+            className="mobile-menu-toggle" 
+            aria-label="Toggle navigation menu"
+            aria-expanded={isMenuOpen}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <span className="hamburger-box">
+              <span className="hamburger-inner"></span>
+            </span>
+          </button>
+        </div>
+
+        <nav className={`site-nav${isMenuOpen ? " is-active" : ""}`} aria-label="Main navigation">
           <NavLink
             to="/"
             end
             className={() => (isHome && activeSection === "home" ? "active" : undefined)}
+            onClick={handleNavClick}
           >
             Home
           </NavLink>
@@ -43,6 +70,7 @@ function SiteLayout() {
             href={aboutHref}
             className={activeSection === "about" ? "active" : undefined}
             aria-current={activeSection === "about" ? "location" : undefined}
+            onClick={handleNavClick}
           >
             About
           </a>
@@ -50,6 +78,7 @@ function SiteLayout() {
             href={offeringsHref}
             className={activeSection === "offerings" ? "active" : undefined}
             aria-current={activeSection === "offerings" ? "location" : undefined}
+            onClick={handleNavClick}
           >
             What I Offer
           </a>
@@ -57,6 +86,7 @@ function SiteLayout() {
             href={videographyHref}
             className={activeSection === "videography" ? "active" : undefined}
             aria-current={activeSection === "videography" ? "location" : undefined}
+            onClick={handleNavClick}
           >
             Videography
           </a>
@@ -64,10 +94,15 @@ function SiteLayout() {
             href={contactHref}
             className={activeSection === "contact" ? "active" : undefined}
             aria-current={activeSection === "contact" ? "location" : undefined}
+            onClick={handleNavClick}
           >
             Contact
           </a>
-          <NavLink to="/gallery" className={({ isActive }) => (isActive ? "active" : undefined)}>
+          <NavLink 
+            to="/gallery" 
+            className={({ isActive }) => (isActive ? "active" : undefined)}
+            onClick={handleNavClick}
+          >
             Gallery
           </NavLink>
         </nav>
