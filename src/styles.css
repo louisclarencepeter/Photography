@@ -1192,8 +1192,18 @@ main {
     min-height: 32rem;
   }
 
+  .contact-aside {
+    height: auto;
+    min-height: auto;
+  }
+
   .contact-visuals {
     grid-template-columns: 1fr;
+    flex: 0 0 auto;
+  }
+
+  .contact-visual {
+    height: auto;
   }
 
   .contact-visual--feature,
