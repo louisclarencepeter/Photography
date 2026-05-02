@@ -1145,6 +1145,9 @@ main {
     display: none;
   }
 
+  .eyebrow {
+    display: none;
+  }
 
   .hero-actions {
     flex-direction: column;
