@@ -23,7 +23,7 @@ function HomePage() {
     <>
       <section className="hero-section" id="home">
         <div className="hero-copy">
-          <p className="eyebrow">Photography and visual storytelling from Frankfurt</p>
+          <p className="eyebrow">Photography and visual storytelling</p>
           <h1>Louis Peter Photography</h1>
           <p className="hero-lead">
             Thoughtful photography for the people, places, and moments that matter most.
