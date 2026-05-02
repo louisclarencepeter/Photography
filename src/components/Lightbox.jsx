@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import ResponsiveImage from "./ResponsiveImage";
 
 const SWIPE_THRESHOLD = 50;
@@ -6,6 +6,7 @@ const VERTICAL_TOLERANCE = 80;
 
 function Lightbox({ images, index, onClose, onPrev, onNext }) {
   const touchStartRef = useRef(null);
+  const dialogRef = useRef(null);
 
   useEffect(() => {
     function handleKeyDown(event) {
@@ -15,6 +16,27 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
         onPrev();
       } else if (event.key === "ArrowRight") {
         onNext();
+      } else if (event.key === "Tab") {
+        // Focus trap: cycle between interactive elements inside the lightbox
+        const focusable = dialogRef.current?.querySelectorAll(
+          'button, [href], [tabindex]:not([tabindex="-1"])'
+        );
+        if (!focusable || focusable.length === 0) return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (event.shiftKey) {
+          if (document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+          }
+        } else {
+          if (document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+          }
+        }
       }
     }
 
@@ -27,6 +49,11 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
       document.removeEventListener("keydown", handleKeyDown);
     };
   }, [onClose, onPrev, onNext]);
+
+  // Auto-focus the close button when lightbox opens
+  const closeRef = useCallback((node) => {
+    if (node) node.focus();
+  }, []);
 
   function handleTouchStart(event) {
     if (event.touches.length !== 1) {
@@ -69,6 +96,7 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
       role="dialog"
       aria-modal="true"
       aria-label="Photograph viewer"
+      ref={dialogRef}
       onClick={onClose}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
@@ -107,6 +135,7 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
       <button
         type="button"
         className="lightbox-control lightbox-close"
+        ref={closeRef}
         onClick={onClose}
         aria-label="Close viewer"
       >

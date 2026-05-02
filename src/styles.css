@@ -519,6 +519,11 @@ main {
   border-color: var(--focus-border);
 }
 
+.contact-form input:invalid:not(:focus):not(:placeholder-shown),
+.contact-form textarea:invalid:not(:focus):not(:placeholder-shown) {
+  border-color: #e06c60;
+}
+
 .submit-button {
   justify-self: start;
   margin-top: 1rem;
@@ -1075,20 +1080,25 @@ main {
   }
 
   .site-nav {
-    display: none;
+    display: flex;
     flex-direction: column;
     width: 100%;
     padding: 2rem 0 1rem;
     gap: 1.6rem;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    font-size: 2.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem);
+    transition: opacity 250ms ease, transform 250ms ease, visibility 250ms;
   }
 
   .site-nav.is-active {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.8rem;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
     gap: 3.2rem;
   }
 

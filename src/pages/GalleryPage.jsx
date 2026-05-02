@@ -83,7 +83,7 @@ function GalleryPage() {
 
       <div className="gallery-columns" id="gallery-grid">
         {filteredImages.map((galleryImage, index) => (
-          <figure key={galleryImage.alt} className="gallery-tile">
+          <figure key={index} className="gallery-tile">
             <button
               type="button"
               className="gallery-tile-button"

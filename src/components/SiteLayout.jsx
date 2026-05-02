@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { aboutDetails } from "../data/siteData";
 import { useActiveSection } from "../hooks";
@@ -18,10 +18,10 @@ function SiteLayout() {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Close menu on route change
-  useEffect(() => {
+  // Close menu on anchor link click
+  const handleNavClick = useCallback(() => {
     setIsMenuOpen(false);
-  }, [location.pathname]);
+  }, []);
 
   // Lock body scroll when menu is open
   useEffect(() => {
@@ -35,10 +35,6 @@ function SiteLayout() {
     };
   }, [isMenuOpen]);
 
-  // Close menu on anchor link click
-  const handleNavClick = () => {
-    setIsMenuOpen(false);
-  };
 
   return (
     <div className="site-shell" id="top">
