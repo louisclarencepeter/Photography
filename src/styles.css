@@ -983,6 +983,18 @@ main {
   }
 }
 
+@keyframes menuFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 960px) {
   :root {
     --anchor-offset: 9rem;
@@ -1080,26 +1092,21 @@ main {
   }
 
   .site-nav {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
     padding: 2rem 0 1rem;
     gap: 1.6rem;
     align-items: center;
     justify-content: center;
-    flex: 1;
-    font-size: 2.8rem;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(1rem);
-    transition: opacity 250ms ease, transform 250ms ease, visibility 250ms;
   }
 
   .site-nav.is-active {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    display: flex;
+    flex: 1;
+    font-size: 2.8rem;
     gap: 3.2rem;
+    animation: menuFadeIn 250ms ease both;
   }
 
   .site-footer {
