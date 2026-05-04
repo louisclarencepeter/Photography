@@ -155,7 +155,7 @@ textarea {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  padding: 2rem 0.6rem 2rem 0;
+  padding: 2rem 0;
   backdrop-filter: blur(16px);
 }
 
@@ -187,6 +187,7 @@ textarea {
   display: flex;
   align-items: center;
   gap: 2rem;
+  padding: 0 2.5rem 0 0;
   font-size: 1.7rem;
 }
 
